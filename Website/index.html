@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=UTF-8>
+	<meta name="author" content="August Rulewich">
+	<meta property="og:image" content="http://www.railmap.xyz/thumbnail.png">
+	<meta name="description" content="A map of all passenger rail networks in the United States.">
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<title>Rail Map</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+	<div id="map"></div>
+	<div class="map-overlay" id="features">
+		<h2>U.S. Passenger Rail Map</h2>
+		<p>A map showing all the current passenger rail networks in the US (or it will be, when it's finished).</p>
+		<h3>What Is This Exactly?</h3>
+		<p>Head on over to the <a href="faq.html" target="_blank">FAQ</a> for more information</p>
+		<p><strong>This site (and map) is very much under construction.</strong> Things may be broken/wonky/generally unfinished. You can view the map and website's current progress <a href="https://trello.com/b/GinKUKvq" target="_blank">on the Trello Board.</a></p>
+		<h3>Got a Suggestion or Comment?</h3>
+		<p>Post it <a href="https://trello.com/c/DvDpT6WP" target="_blank">here</a>.</p>
+		<br>
+		<p><strong>Current Working Map Version:</strong></p>
+		<p><em><strong>0.9</strong> // Last Updated April 2019</em></p>
+	</div>
+	<div class="map-overlay" id="legend"></div>
+
+	<script type="text/javascript">
+		//define access token
+		mapboxgl.accessToken = 'pk.eyJ1IjoiYXVnd2ljaCIsImEiOiJjamZyYmcyM3Axems3MzNwZWxpM2w2Z285In0.HxvN-GHjGBnR9usto_s1SQ';
+
+		//create map
+		const map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/augwich/cju6db6xg1btp1fqlv1bw81xi',
+			center: [-73.901105, 40.802937],
+			zoom: 12.7
+		});
+
+		//add nav controls
+		map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+
+		//add geolocation
+		map.addControl(new mapboxgl.GeolocateControl({
+		    positionOptions: {
+		        enableHighAccuracy: true
+		    },
+		    trackUserLocation: true
+		}), 'top-right');
+
+		//wait for map to load before adjustments
+
+	//	map.on('load', function() {
+	//		var layers = ['']
+	//	})
+
+	</script>
+
+	<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.railmap.xyz/analytics/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+</body>	
