@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "NE_connections_build 1",
+"features": [
+{ "type": "Feature", "properties": { "fid": 32, "Transfer Type": "Transfer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -71.060496706567477, 42.355394883439018 ], [ -71.062266680292083, 42.356254751367189 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 33, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -71.05490547011631, 42.352417962512405 ], [ -71.05508130338842, 42.3513932180091 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 34, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -71.060101080064086, 42.365303429262319 ], [ -71.063093875465967, 42.366874480590674 ] ] ] } }
+]
+}
