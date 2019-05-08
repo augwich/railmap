@@ -1,14 +1,18 @@
 Table of contents:
 ==================
 * [Support](#support)
+* [Build status](#build-status)
+* [Code quality](#code-quality)
 * [About](#about)
 * [License](#license)
 * [Contributing](#contributing)
 * [Installation](#installation-via-composer)
 * [Usage](#usage)
-    - [Draw a chart through Image class only](#draw-a-chart-through-image-class-only)
-    - [Draw a chart with a dedicated class](#draw-a-chart-with-a-dedicated-class)
-    - [Notes](#notes)
+    - [Charts created through Image class](#charts-created-through-image-class)
+    - [Standalone charts](#standalone-charts)
+    - [Barcodes](#barcodes)
+    - [Cache](#cache)
+    - [Fonts and palletes](#fonts-and-palletes)
 * [Changelog](#changelog)
 * [References](#references)
 * [Links](#links)
@@ -20,47 +24,60 @@ This project is supported in a basic manner and no new features will be introduc
 Issues and pull requests will be reviewed and resolved if need be, so feel free
 to post them.
 
+Build status:
+=============
+[![Build Status](https://travis-ci.org/szymach/c-pchart.svg?branch=2.0)](https://travis-ci.org/szymach/c-pchart)
+
+Code quality:
+=============
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/szymach/c-pchart/badges/quality-score.png?b=2.0)](https://scrutinizer-ci.com/g/szymach/c-pchart/?branch=2.0)
+[![Code Coverage](https://scrutinizer-ci.com/g/szymach/c-pchart/badges/coverage.png?b=2.0)](https://scrutinizer-ci.com/g/szymach/c-pchart/?branch=2.0)
+
 About:
 ======
 
-A project bringing Composer support and some basic PHP 5 standards to pChart 2.0 library.
-The aim is to allow pChart integration into modern frameworks like Symfony2.
+This library is a port of the excellent pChart statistics library created by Jean-Damien Pogolotti,
+and aims to allow the usage of it in modern applications. This was done through
+applying PSR standards to code, introducing namespaces and typehints, along with
+some basic annotations to methods.
 
-This is the 2.0 version, which aims to further update the code, but without changing
-the functionality if possible. It will introduce some minor backwards compatibility breaks,
-so if that's a concern, use the 1.* version.
+This is the `2.x` version, which aims to further update the code, but with the least
+backwards compatibility breaks possible. However if you cannot risk any of these,
+you will need to use the `1.x` branch.
 
 What was done:
 
-- Added support for PHP versions from 5.4 to 7.1.
+- Support for PHP versions from 5.4 to 7.1.
 
-- Made a full port of the library's functionality.
+- Made a full port of the library's functionality. I have touched very little of
+the actual logic, so most code from the original library should work.
 
 - Defined and added namespaces to all classes.
 
-- Replaced all `exit()` / `die()` commands with `throw` statements to allow a degree of error control.
+- Replaced all `exit()` / `die()` commands with `throw` statements.
 
-- Refactored the code to meet PSR-2 standard and added annotations (as best as I could figure them out).
+- Refactored the code to meet PSR-2 standard and added annotations (as best as I could figure them out)
 to methods Also, typehinting was added to methods where possible, so some backwards compatibility breaks
-may occur.
+may occur if you did some weird things.
 
-- Added a factory service for loading the classes.
-
-- Moved all constants to a single file `src/Resources/data/constants.php`. It is loaded automatically,
-so no need for manual action.
+- Moved all constants to a single file `src/Resources/data/constants.php`. It is loaded automatically
+through Composer, so no need for manual action.
 
 License:
 ========
 
-It was previously stated that this package is on [MIT](https://opensource.org/licenses/MIT) license, which did not meet the requirements
-set by the original author. It is now under the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html)
-license, so if you wish to use it in a commercial project, you need to pay an [appropriate fee](http://www.pchart.net/license).
+It was previously stated that this package uses the [MIT](https://opensource.org/licenses/MIT) license,
+which did not meet the requirements set by the original author. It is now under the
+[GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) license, so if you wish to
+use it in a commercial project, you need to pay an [appropriate fee](http://www.pchart.net/license).
 
 Contributing:
 =============
 
-If you wish to contribute to the `1.*` version, there is a branch called `legacy` to which you
-may submit pull requests. Otherwise feel free to use the `master` branch.
+All in all, this is a legacy library ported over from PHP 4, so the code is neither
+beautiful nor easy to understand. I did my best to modernize and cover it with
+some basic tests, but there is much more that could be done. If you are willing and
+have time to fix or improve anything, feel free to post a PR or issue.
 
 Installation (via Composer):
 ============================
@@ -69,7 +86,7 @@ For composer installation, add:
 
 ```json
 "require": {
-    "szymach/c-pchart": "^2.0@dev"
+    "szymach/c-pchart": "^2.0"
 },
 ```
 
@@ -84,233 +101,82 @@ in your project's root directory.
 Usage:
 ======
 
-Now you can autoload or use the classes via their namespaces. If you want to, you
-may utilize the provided factory class. Below are examples of how to use the library,
-the charts themselves are borrowed from the official documentation.
+Your best source to understanding how to use the library is still the [official wiki](http://wiki.pchart.net/).
+However, I have ported at least one example for each chart into Markdown files,
+so you can compare each version and figure out how to use the current implementation.
 
-Draw a chart through Image class only
+Charts created through Image class
 ---------------------------------------
 
-Not all charts need to be created through a seperate class (ex. bar or spline charts),
-some are created via the Image class (check the official documentation before drawing).
-An example for a spline chart below:
+Most of the basic charts are created through methods of the `CpChart\Chart\Image`
+class. Below you can find a full list of these charts, alongside example code.
 
-```php
-require __DIR__.'/../vendor/autoload.php';
+- [area](doc/area.md)
+- [bar](doc/bar.md)
+- [best fit](doc/best_fit.md)
+- [filled spline](doc/filled_spline.md)
+- [filled step](doc/filled_step.md)
+- [line](doc/line.md)
+- [plot](doc/plot.md)
+- [progress](doc/progress.md)
+- [spline](doc/spline.md)
+- [stacked area](doc/stacked_area.md)
+- [stacked bar](doc/stacked_bar.md)
+- [step](doc/step.md)
+- [zone](doc/zone.md)
 
-use CpChart\Factory\Factory;
-use Exception;
-
-try {
-    // Create a factory class - it will load necessary files automatically,
-    // otherwise you will need to add them on your own
-    $factory = new Factory();
-    $myData = $factory->newData(array(), "Serie1");
-
-    // Create the image and set the data
-    $myPicture = $factory->newImage(700, 230, $myData);
-    $myPicture->setShadow(
-        true,
-        array("X" => 1, "Y" => 1, "R" => 0, "G" => 0, "B" => 0, "Alpha" => 20)
-    );
-
-    // 1st spline drawn in white with control points visible
-    $firstCoordinates = array(array(40, 80), array(280, 60), array(340, 166), array(590, 120));
-    $fistSplineSettings = array("R" => 255, "G" => 255, "B" => 255, "ShowControl" => true);
-    $myPicture->drawSpline($firstCoordinates, $fistSplineSettings);
-
-    // 2nd spline dashed drawn in white with control points visible
-    $secondCoordinates = array(array(250, 50), array(250, 180), array(350, 180), array(350, 50));
-    $secondSplineSettings = array(
-        "R" => 255,
-        "G" => 255,
-        "B" => 255,
-        "ShowControl" => true,
-        "Ticks" => 4
-    );
-    $myPicture->drawSpline($secondCoordinates, $secondSplineSettings);
-
-    // Output the chart to the browser
-    $myPicture->Render("example.drawSpline.png");
-    $myPicture->Stroke();
-} catch (Exception $ex) {
-    echo sprintf('There was an error: %s', $ex->getMessage());
-}
-```
-
-Draw a chart with a dedicated class:
+Standalone charts:
 ------------------------------------
 
-Some charts require using a dedicated class, which you can create via the factory.
-Notice that you specify the type of chart, not the class name. An example for a pie
-chart below:
+The more advanced charts have their own separate class you need to use in order
+to create them. As before, below is a full list of these, with example code.
 
-```php
-require __DIR__.'/../vendor/autoload.php';
+- [2D pie](doc/2d_pie.md)
+- [3D pie](doc/3d_pie.md)
+- [2D ring](doc/2d_ring.md)
+- [3D ring](doc/3d_ring.md)
+- [bubble](doc/bubble.md)
+- [contour](doc/contour.md)
+- [polar](doc/polar.md)
+- [radar](doc/radar.md)
+- [scatter best fit](doc/scatter_best_fit.md)
+- [scatter line](doc/scatter_line.md)
+- [scatter plot](doc/scatter_plot.md)
+- [scatter spline](doc/scatter_spline.md)
+- [scatter threshold](doc/scatter_threshold.md)
+- [scatter threshold area](doc/scatter_threshold_area.md)
+- [split path](doc/split_path.md)
+- [spring](doc/spring.md)
+- [stock](doc/stock.md)
+- [surface](doc/surface.md)
 
-use CpChart\Chart\Pie;
-use CpChart\Factory\Factory;
-use Exception;
+Barcodes
+--------
 
-try {
-    $factory = new Factory();
+The pChart library also provides a way to render barcodes 39 and 128. Below you
+can find links to doc on creating them:
 
-    // Create and populate data
-    $myData = $factory->newData(array(40, 60, 15, 10, 6, 4), "ScoreA");
-    $myData->setSerieDescription("ScoreA", "Application A");
+- [barcode39](doc/barcode_39.md)
+- [barcode128](doc/barcode_128.md)
 
-    // Define the absissa serie
-    $myData->addPoints(array("<10", "10<>20", "20<>40", "40<>60", "60<>80", ">80"), "Labels");
-    $myData->setAbscissa("Labels");
+Cache
+-----
 
-    // Create the image
-    $myPicture = $factory->newImage(700, 230, $myData);
+If you find yourself creating charts out of a set of data more than once, you may
+consider using the cache component of the library. Head on to the [dedicated part](doc/cache.md)
+of the documentation for information on how to do that.
 
-    // Draw a solid background
-    $backgroundSettings = array(
-        "R" => 173,
-        "G" => 152,
-        "B" => 217,
-        "Dash" => 1,
-        "DashR" => 193,
-        "DashG" => 172,
-        "DashB" => 237
-    );
-    $myPicture->drawFilledRectangle(0, 0, 700, 230, $backgroundSettings);
+Fonts and palletes
+------------------
 
-    //Draw a gradient overlay
-    $gradientSettings = array(
-        "StartR" => 209,
-        "StartG" => 150,
-        "StartB" => 231,
-        "EndR" => 111,
-        "EndG" => 3,
-        "EndB" => 138,
-        "Alpha" => 50
-    );
-    $myPicture->drawGradientArea(0, 0, 700, 230, DIRECTION_VERTICAL, $gradientSettings);
-    $myPicture->drawGradientArea(
-        0,
-        0,
-        700,
-        20,
-        DIRECTION_VERTICAL,
-        array(
-            "StartR" => 0,
-            "StartG" => 0,
-            "StartB" => 0,
-            "EndR" => 50,
-            "EndG" => 50,
-            "EndB" => 50,
-            "Alpha" => 100
-        )
-    );
-
-    // Add a border to the picture
-    $myPicture->drawRectangle(0, 0, 699, 229, array("R" => 0, "G" => 0, "B" => 0));
-
-    // Write the picture title
-    $myPicture->setFontProperties(array("FontName" => "Silkscreen.ttf", "FontSize" => 6));
-    $myPicture->drawText(10, 13, "pPie - Draw 2D pie charts", array("R" => 255, "G" => 255, "B" => 255));
-
-    // Set the default font properties
-    $myPicture->setFontProperties(
-        array("FontName" => "Forgotte.ttf", "FontSize" => 10, "R" => 80, "G" => 80, "B" => 80)
-    );
-
-    // Enable shadow computing
-    $myPicture->setShadow(
-        true,
-        array("X" => 2, "Y" => 2, "R" => 150, "G" => 150, "B" => 150, "Alpha" => 100)
-    );
-    $myPicture->drawText(
-        140,
-        200,
-        "Single AA pass",
-        array("R" => 0, "G" => 0, "B" => 0, "Align" => TEXT_ALIGN_TOPMIDDLE)
-    );
-
-    // Create and draw the chart
-    /* @var $pieChart CpPie */
-    $pieChart = $factory->newChart("pie", $myPicture, $myData);
-    $pieChart->draw2DPie(140, 125, array("SecondPass" => false));
-    $pieChart->draw2DPie(340, 125, array("DrawLabels" => true, "Border" => true));
-    $pieChart->draw2DPie(
-        540,
-        125,
-        array(
-            "DataGapAngle" => 10,
-            "DataGapRadius" => 6,
-            "Border" => true,
-            "BorderR" => 255,
-            "BorderG" => 255,
-            "BorderB" => 255
-        )
-    );
-    $myPicture->drawText(
-        540,
-        200,
-        "Extended AA pass / Splitted",
-        array("R" => 0, "G" => 0, "B" => 0, "Align" => TEXT_ALIGN_TOPMIDDLE)
-    );
-
-    // Save the chart to a test directory and output it to a browser
-    $pieChart->pChartObject->Render("charts/example.draw2DPie.png");
-    $pieChart->pChartObject->stroke();
-} catch (Exception $ex) {
-    echo sprintf('There was an error: %s', $ex->getMessage());
-}
-```
-
-Notes:
-------
-
-Basically, all should work as defined in the pChart 2.0 documentation with added
-support for try/catch functionality. The factory class has methods to load all types of
-classes present in the pChart library.
-
-**IMPORTANT!** If you want to use any of the fonts or palletes files, provide only
-the name of the actual file, do not add the 'fonts' or 'palettes' folder to the
+If you want to use any of the fonts or palletes files, provide only
+the name of the actual file, do not add the `fonts` or `palettes` folder to the
 string given into the function. If you want to load them from a different directory
 than the default, you need to add the full path to the file (ex. `__DIR__.'/folder/to/my/palletes`).
-
-Changelog
-=========
-1.0 Stable version with basic functionality.
-
-1.1 Added factory service.
-
-1.1.1 Changed chart loading via factory a bit (see class annotations).
-
-1.1.2 Updated service class with Exception handling regarding missing / wrong class name.
-
-1.1.3 The file with classes' constants is now loaded via Composer (thanks to ThaDafinser).
-
-1.1.4 Fixed code-breaking typ (thanks to subtronic).
-
-1.1.5 Added an option to hide the X axis or only it's values (thanks to julien-gm).
-
-1.1.6 Added support for closures in formatting scale (thanks to funkjedi)
-
-2.0 Updated all classes to PSR-2 standard, added typehinting where possible, updated
-    annotations in methods to be as accurate as possible. Added Behat testing and
-    restructed the namespaces into more sensible structure.
 
 References
 ==========
 [The original pChart website](http://www.pchart.net/)
-
-[Composer](https://getcomposer.org/)
-
-PHP Framework Interoperability Group at GitHub on PHP coding standards:
-
-[PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
-
-[PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
-
-[PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-
-[PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md)
 
 Links
 =====

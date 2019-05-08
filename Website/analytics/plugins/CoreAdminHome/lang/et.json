@@ -4,6 +4,7 @@
         "Administration": "Administreerimine",
         "ArchivingSettings": "Arhiveerimise seaded",
         "BrandingSettings": "Brändingu seaded",
+        "ReleaseChannel": "Vabasta kanal",
         "ClickHereToOptIn": "Vajuta et lisada valikusse.",
         "ClickHereToOptOut": "Vajuta et eemaldada valikust.",
         "EmailServerSettings": "E-posti serveri seaded",
@@ -29,7 +30,6 @@
         "UseCustomLogo": "Kasuta enda logo",
         "ValidPiwikHostname": "Kehtiv Matomou server (IP\/host)",
         "WithOptionalRevenue": "koos valikulise tuluga",
-        "YouAreOptedIn": "Sa oled valikus sees.",
         "YouAreOptedOut": "Sa oled valikust väljas."
     }
 }

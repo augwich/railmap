@@ -9,7 +9,7 @@
  * Usage:
  * <div piwik-field>
  *
- *     eg <div piwik-field ui-control="select"
+ *     eg <div piwik-field uicontrol="select"
  * title="{{ 'SitesManager_Timezone'|translate }}"
  * value="site.timezone"
  * options="timezones"
@@ -20,7 +20,7 @@
  * placeholder=""
  * rows="3"
  * autocomplete="off"
- * disabled="true"
+ * data-disabled="true"
  * full-width="true"
  * templateFile=""></div>
  *
@@ -48,6 +48,7 @@
                 title: '@',
                 inlineHelp: '@',
                 disabled: '=',
+                uiControlAttributes: '=',
                 autocomplete: '@',
                 condition: '@',
                 varType: '@',
@@ -114,7 +115,7 @@
                 field.inlineHelp = $scope.inlineHelp;
                 field.templateFile = $scope.templateFile;
                 field.title = $scope.title;
-                field.uiControlAttributes = {};
+                field.uiControlAttributes = $scope.uiControlAttributes || {};
                 field.fullWidth = !!$scope.fullWidth;
 
                 if (field.type === 'array' && angular.isString(field.value) && field.value) {
@@ -141,6 +142,12 @@
                 $scope.$watch('title', function (val, oldVal) {
                     if (val !== oldVal) {
                         $scope.field.title = val;
+                    }
+                });
+
+                $scope.$watch('inlineHelp', function (val, oldVal) {
+                    if (val !== oldVal) {
+                        $scope.field.inlineHelp = val;
                     }
                 });
 

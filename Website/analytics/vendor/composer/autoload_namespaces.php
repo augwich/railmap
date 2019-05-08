@@ -13,7 +13,7 @@ return array(
     'Symfony\\Bridge\\Monolog\\' => array($vendorDir . '/symfony/monolog-bridge'),
     'PEAR_' => array($baseDir . '/libs'),
     'PEAR' => array($vendorDir . '/pear/pear_exception'),
-    'JShrink' => array($vendorDir . '/tedivm/jshrink/src'),
+    'JShrink' => array($vendorDir . '/matomo-org/jshrink/src'),
     'HTML_' => array($baseDir . '/libs'),
     'Console' => array($vendorDir . '/pear/console_getopt'),
     'Archive_Tar' => array($vendorDir . '/pear/archive_tar'),

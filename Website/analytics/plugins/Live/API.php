@@ -139,7 +139,7 @@ class API extends \Piwik\Plugin\API
     {
         Piwik::checkUserHasViewAccess($idSite);
 
-        $table = $this->loadLastVisitorDetailsFromDatabase($idSite, $period = false, $date = false, $segment = false, $offset = 0, $filter_limit, $minTimestamp = false, $filterSortOrder = false, $visitorId);
+        $table = $this->loadLastVisitsDetailsFromDatabase($idSite, $period = false, $date = false, $segment = false, $offset = 0, $filter_limit, $minTimestamp = false, $filterSortOrder = false, $visitorId);
         $this->addFilterToCleanVisitors($table, $idSite, $flat);
 
         return $table;
@@ -157,10 +157,16 @@ class API extends \Piwik\Plugin\API
      * @param bool|int $minTimestamp (optional) Minimum timestamp to restrict the query to (useful when paginating or refreshing visits)
      * @param bool $flat
      * @param bool $doNotFetchActions
+     * @param bool $enhanced for plugins that want to expose additional information
      * @return DataTable
      */
-    public function getLastVisitsDetails($idSite, $period = false, $date = false, $segment = false, $countVisitorsToFetch = false, $minTimestamp = false, $flat = false, $doNotFetchActions = false)
+    public function getLastVisitsDetails($idSite, $period = false, $date = false, $segment = false, $countVisitorsToFetch = false, $minTimestamp = false, $flat = false, $doNotFetchActions = false, $enhanced = false)
     {
+        Piwik::checkUserHasViewAccess($idSite);
+        $idSite = Site::getIdSitesFromIdSitesString($idSite);
+        if (is_array($idSite) && count($idSite) === 1) {
+            $idSite = array_shift($idSite);
+        }
         Piwik::checkUserHasViewAccess($idSite);
 
         if ($countVisitorsToFetch !== false) {
@@ -173,7 +179,7 @@ class API extends \Piwik\Plugin\API
 
         $filterSortOrder = Common::getRequestVar('filter_sort_order', false, 'string');
 
-        $dataTable = $this->loadLastVisitorDetailsFromDatabase($idSite, $period, $date, $segment, $filterOffset, $filterLimit, $minTimestamp, $filterSortOrder, $visitorId = false);
+        $dataTable = $this->loadLastVisitsDetailsFromDatabase($idSite, $period, $date, $segment, $filterOffset, $filterLimit, $minTimestamp, $filterSortOrder, $visitorId = false);
         $this->addFilterToCleanVisitors($dataTable, $idSite, $flat, $doNotFetchActions);
 
         $filterSortColumn = Common::getRequestVar('filter_sort_column', false, 'string');
@@ -217,7 +223,7 @@ class API extends \Piwik\Plugin\API
 
         $limit = Config::getInstance()->General['live_visitor_profile_max_visits_to_aggregate'];
 
-        $visits = $this->loadLastVisitorDetailsFromDatabase($idSite, $period = false, $date = false, $segment,
+        $visits = $this->loadLastVisitsDetailsFromDatabase($idSite, $period = false, $date = false, $segment,
             $offset = 0, $limit, false, false, $visitorId);
         $this->addFilterToCleanVisitors($visits, $idSite, $flat = false, $doNotFetchActions = false, $filterNow = true);
 
@@ -265,21 +271,21 @@ class API extends \Piwik\Plugin\API
         // for faster performance search for a visitor within the last 7 days first
         $minTimestamp = Date::now()->subDay(7)->getTimestamp();
 
-        $dataTable = $this->loadLastVisitorDetailsFromDatabase(
+        $dataTable = $this->loadLastVisitsDetailsFromDatabase(
             $idSite, $period = false, $date = false, $segment, $offset = 0, $limit = 1, $minTimestamp
         );
 
         if (0 >= $dataTable->getRowsCount()) {
             $minTimestamp = Date::now()->subYear(1)->getTimestamp();
             // no visitor found in last 7 days, look further back for up to 1 year. This query will be slower
-            $dataTable = $this->loadLastVisitorDetailsFromDatabase(
+            $dataTable = $this->loadLastVisitsDetailsFromDatabase(
                 $idSite, $period = false, $date = false, $segment, $offset = 0, $limit = 1, $minTimestamp
             );
         }
 
         if (0 >= $dataTable->getRowsCount()) {
             // no visitor found in last year, look over all logs. This query might be quite slow
-            $dataTable = $this->loadLastVisitorDetailsFromDatabase(
+            $dataTable = $this->loadLastVisitsDetailsFromDatabase(
                 $idSite, $period = false, $date = false, $segment, $offset = 0, $limit = 1
             );
         }
@@ -307,7 +313,7 @@ class API extends \Piwik\Plugin\API
      */
     public function getFirstVisitForVisitorId($idSite, $visitorId)
     {
-        Piwik::checkUserHasViewAccess($idSite);
+        Piwik::checkUserHasSomeViewAccess();
 
         if (empty($visitorId)) {
             return new DataTable();
@@ -385,21 +391,23 @@ class API extends \Piwik\Plugin\API
         });
     }
 
-    private function loadLastVisitorDetailsFromDatabase($idSite, $period, $date, $segment = false, $offset = 0, $limit = 100, $minTimestamp = false, $filterSortOrder = false, $visitorId = false)
+    private function loadLastVisitsDetailsFromDatabase($idSite, $period, $date, $segment = false, $offset = 0, $limit = 100, $minTimestamp = false, $filterSortOrder = false, $visitorId = false)
     {
         $model = new Model();
-        $data = $model->queryLogVisits($idSite, $period, $date, $segment, $offset, $limit, $visitorId, $minTimestamp, $filterSortOrder);
-        return $this->makeVisitorTableFromArray($data);
+        list($data, $hasMoreVisits) = $model->queryLogVisits($idSite, $period, $date, $segment, $offset, $limit, $visitorId, $minTimestamp, $filterSortOrder, true);
+        return $this->makeVisitorTableFromArray($data, $hasMoreVisits);
     }
 
     /**
      * @param $data
+     * @param $hasMoreVisits
      * @return DataTable
      * @throws Exception
      */
-    private function makeVisitorTableFromArray($data)
+    private function makeVisitorTableFromArray($data, $hasMoreVisits=null)
     {
         $dataTable = new DataTable();
+
         $dataTable->addRowsFromSimpleArray($data);
 
         if (!empty($data[0])) {
@@ -408,6 +416,10 @@ class API extends \Piwik\Plugin\API
             }, $data[0]);
 
             $dataTable->setMetadata(DataTable::COLUMN_AGGREGATION_OPS_METADATA_NAME, $columnsToNotAggregate);
+        }
+
+        if (null !== $hasMoreVisits) {
+            $dataTable->setMetadata('hasMoreVisits', $hasMoreVisits);
         }
 
         return $dataTable;

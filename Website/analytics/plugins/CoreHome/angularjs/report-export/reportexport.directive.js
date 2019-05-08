@@ -27,7 +27,9 @@
 
                 var popoverParamBackup;
 
-                scope.processExport = function() {
+                scope.showUrl = false;
+
+                scope.getExportLink = function() {
 
                     var dataTable = scope.dataTable;
                     var format    = scope.reportFormat;
@@ -42,7 +44,7 @@
                     var params = scope.requestParams;
 
                     if (params && typeof params == "string") {
-                        params = JSON.parse(params)
+                        params = JSON.parse(params);
                     } else {
                         params = {};
                     }
@@ -102,6 +104,11 @@
 
                     if ($.isPlainObject(params)) {
                         $.each(params, function (index, param) {
+                            if (param === true) {
+                                param = 1;
+                            } else if (param === false) {
+                                param = 0;
+                            }
                             exportUrlParams[index] = param;
                         });
                     }
@@ -115,6 +122,10 @@
 
                     if (!scope.optionFlat && scope.optionExpanded) {
                         exportUrlParams.expanded = 1;
+                    }
+
+                    if (scope.optionFormatMetrics) {
+                        exportUrlParams.format_metrics = 1;
                     }
 
                     if (dataTable.param.pivotBy) {
@@ -148,14 +159,19 @@
                         if (label.length > 1) {
                             exportUrlParams.label = label;
                         } else {
-                            exportUrlParams.label = encodeURIComponent(label[0]);
+                            exportUrlParams.label = label[0];
                         }
                     }
 
                     exportUrlParams.token_auth = piwik.token_auth;
                     exportUrlParams.filter_limit = limit;
 
-                    window.open('index.php?' + $httpParamSerializerJQLike(exportUrlParams));
+                    var currentUrl = $location.absUrl();
+                    var urlParts = currentUrl.split('/');
+                    urlParts.pop();
+                    var url = urlParts.join('/');
+
+                    return url + '/index.php?' + $httpParamSerializerJQLike(exportUrlParams);
                 };
 
                 element.on('click', function () {
@@ -166,12 +182,13 @@
                     var popover   = Piwik_Popover.showLoading('Export');
                     var formats   = JSON.parse(scope.reportFormats);
 
-                    scope.reportType     = 'default';
-                    scope.reportLimit    = dataTable.param.filter_limit > 0 ? dataTable.param.filter_limit : 100;
-                    scope.reportLimitAll = dataTable.param.filter_limit == -1 ? 'yes' : 'no';
-                    scope.optionFlat     = dataTable.param.flat;
-                    scope.optionExpanded = 1;
-                    scope.hasSubtables   = dataTable.param.flat == 1 || dataTable.numberOfSubtables > 0;
+                    scope.reportType          = 'default';
+                    scope.reportLimit         = dataTable.param.filter_limit > 0 ? dataTable.param.filter_limit : 100;
+                    scope.reportLimitAll      = dataTable.param.filter_limit == -1 ? 'yes' : 'no';
+                    scope.optionFlat          = dataTable.param.flat === true || dataTable.param.flat === 1 || dataTable.param.flat === "1";
+                    scope.optionExpanded      = 1;
+                    scope.optionFormatMetrics = 0;
+                    scope.hasSubtables        = scope.optionFlat || dataTable.numberOfSubtables > 0;
 
                     scope.availableReportFormats = {
                         default: formats,
@@ -202,7 +219,7 @@
                     }
 
                     $compile(elem)(scope, function (compiled){
-                        Piwik_Popover.setTitle(_pk_translate('General_Export') + ' ' + scope.reportTitle);
+                        Piwik_Popover.setTitle(_pk_translate('General_Export') + ' ' + piwikHelper.htmlEntities(scope.reportTitle));
                         Piwik_Popover.setContent(compiled);
 
                         if (popoverParamBackup != '') {

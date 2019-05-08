@@ -36,6 +36,7 @@ class VisitorProfile
         $visitorDetailsManipulators = Visitor::getAllVisitorDetailsInstances();
 
         $this->profile['visitorId']       = $visitorId;
+        $this->profile['hasMoreVisits']   = $visits->getMetadata('hasMoreVisits');
         $this->profile['visit_first']     = $visits->getLastRow();
         $this->profile['visit_last']      = $visits->getFirstRow();
 
@@ -78,6 +79,11 @@ class VisitorProfile
      */
     private function handleAdjacentVisitorIds(DataTable $visits, $visitorId, $segment)
     {
+        if (!$visits->getRowsCount()) {
+            $this->profile['nextVisitorId'] = false;
+            $this->profile['previousVisitorId'] = false;
+            return;
+        }
         // get visitor IDs that are adjacent to this one in log_visit
         // TODO: make sure order of visitor ids is not changed if a returning visitor visits while the user is
         //       looking at the popup.

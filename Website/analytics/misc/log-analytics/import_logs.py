@@ -230,19 +230,19 @@ class W3cExtendedFormat(RegexFormat):
     FIELDS_LINE_PREFIX = '#Fields: '
 
     fields = {
-        'date': '(?P<date>\d+[-\d+]+',
-        'time': '[\d+:]+)[.\d]*?', # TODO should not assume date & time will be together not sure how to fix ATM.
-        'cs-uri-stem': '(?P<path>/\S*)',
-        'cs-uri-query': '(?P<query_string>\S*)',
-        'c-ip': '"?(?P<ip>[\w*.:-]*)"?',
-        'cs(User-Agent)': '(?P<user_agent>".*?"|\S*)',
-        'cs(Referer)': '(?P<referrer>\S+)',
-        'sc-status': '(?P<status>\d+)',
-        'sc-bytes': '(?P<length>\S+)',
-        'cs-host': '(?P<host>\S+)',
-        'cs-method': '(?P<method>\S+)',
-        'cs-username': '(?P<userid>\S+)',
-        'time-taken': '(?P<generation_time_secs>[.\d]+)'
+        'date': r'(?P<date>\d+[-\d+]+',
+        'time': r'[\d+:]+)[.\d]*?', # TODO should not assume date & time will be together not sure how to fix ATM.
+        'cs-uri-stem': r'(?P<path>/\S*)',
+        'cs-uri-query': r'(?P<query_string>\S*)',
+        'c-ip': r'"?(?P<ip>[\w*.:-]*)"?',
+        'cs(User-Agent)': r'(?P<user_agent>".*?"|\S*)',
+        'cs(Referer)': r'(?P<referrer>\S+)',
+        'sc-status': r'(?P<status>\d+)',
+        'sc-bytes': r'(?P<length>\S+)',
+        'cs-host': r'(?P<host>\S+)',
+        'cs-method': r'(?P<method>\S+)',
+        'cs-username': r'(?P<userid>\S+)',
+        'time-taken': r'(?P<generation_time_secs>[.\d]+)'
     }
 
     def __init__(self):
@@ -304,7 +304,7 @@ class W3cExtendedFormat(RegexFormat):
 
         # if the --w3c-time-taken-millisecs option is used, make sure the time-taken field is interpreted as milliseconds
         if config.options.w3c_time_taken_in_millisecs:
-            expected_fields['time-taken'] = '(?P<generation_time_milli>[\d.]+)'
+            expected_fields['time-taken'] = r'(?P<generation_time_milli>[\d.]+)'
 
         for mapped_field_name, field_name in config.options.custom_w3c_fields.iteritems():
             expected_fields[mapped_field_name] = expected_fields[field_name]
@@ -316,13 +316,13 @@ class W3cExtendedFormat(RegexFormat):
 
         # Skip the 'Fields: ' prefix.
         fields_line = fields_line[9:].strip()
-        for field in re.split('\s+', fields_line):
+        for field in re.split(r'\s+', fields_line):
             try:
                 regex = expected_fields[field]
             except KeyError:
-                regex = '(?:".*?"|\S+)'
+                regex = r'(?:".*?"|\S+)'
             full_regex.append(regex)
-        full_regex = '\s+'.join(full_regex)
+        full_regex = r'\s+'.join(full_regex)
 
         logging.debug("Based on 'Fields:' line, computed regex to be %s", full_regex)
 
@@ -344,8 +344,8 @@ class IisFormat(W3cExtendedFormat):
 
     fields = W3cExtendedFormat.fields.copy()
     fields.update({
-        'time-taken': '(?P<generation_time_milli>[.\d]+)',
-        'sc-win32-status': '(?P<__win32_status>\S+)' # this group is useless for log importing, but capturing it
+        'time-taken': r'(?P<generation_time_milli>[.\d]+)',
+        'sc-win32-status': r'(?P<__win32_status>\S+)' # this group is useless for log importing, but capturing it
                                                      # will ensure we always select IIS for the format instead of
                                                      # W3C logs when detecting the format. This way there will be
                                                      # less accidental importing of IIS logs w/o --w3c-time-taken-milli.
@@ -360,8 +360,8 @@ class ShoutcastFormat(W3cExtendedFormat):
 
     fields = W3cExtendedFormat.fields.copy()
     fields.update({
-        'c-status': '(?P<status>\d+)',
-        'x-duration': '(?P<generation_time_secs>[.\d]+)'
+        'c-status': r'(?P<status>\d+)',
+        'x-duration': r'(?P<generation_time_secs>[.\d]+)'
     })
 
     def __init__(self):
@@ -380,16 +380,16 @@ class AmazonCloudFrontFormat(W3cExtendedFormat):
 
     fields = W3cExtendedFormat.fields.copy()
     fields.update({
-        'x-event': '(?P<event_action>\S+)',
-        'x-sname': '(?P<event_name>\S+)',
-        'cs-uri-stem': '(?:rtmp:/)?(?P<path>/\S*)',
-        'c-user-agent': '(?P<user_agent>".*?"|\S+)',
+        'x-event': r'(?P<event_action>\S+)',
+        'x-sname': r'(?P<event_name>\S+)',
+        'cs-uri-stem': r'(?:rtmp:/)?(?P<path>/\S*)',
+        'c-user-agent': r'(?P<user_agent>".*?"|\S+)',
 
         # following are present to match cloudfront instead of W3C when we know it's cloudfront
-        'x-edge-location': '(?P<x_edge_location>".*?"|\S+)',
-        'x-edge-result-type': '(?P<x_edge_result_type>".*?"|\S+)',
-        'x-edge-request-id': '(?P<x_edge_request_id>".*?"|\S+)',
-        'x-host-header': '(?P<x_host_header>".*?"|\S+)'
+        'x-edge-location': r'(?P<x_edge_location>".*?"|\S+)',
+        'x-edge-result-type': r'(?P<x_edge_result_type>".*?"|\S+)',
+        'x-edge-request-id': r'(?P<x_edge_request_id>".*?"|\S+)',
+        'x-host-header': r'(?P<x_host_header>".*?"|\S+)'
     })
 
     def __init__(self):
@@ -408,33 +408,33 @@ class AmazonCloudFrontFormat(W3cExtendedFormat):
         else:
             return super(AmazonCloudFrontFormat, self).get(key)
 
-_HOST_PREFIX = '(?P<host>[\w\-\.]*)(?::\d+)?\s+'
+_HOST_PREFIX = r'(?P<host>[\w\-\.]*)(?::\d+)?\s+'
 
 _COMMON_LOG_FORMAT = (
-    '(?P<ip>[\w*.:-]+)\s+\S+\s+(?P<userid>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+'
-    '"(?P<method>\S+)\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\d+)\s+(?P<length>\S+)'
+    r'(?P<ip>[\w*.:-]+)\s+\S+\s+(?P<userid>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+'
+    r'"(?P<method>\S+)\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\d+)\s+(?P<length>\S+)'
 )
 _NCSA_EXTENDED_LOG_FORMAT = (_COMMON_LOG_FORMAT +
-    '\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"'
+    r'\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"'
 )
 _S3_LOG_FORMAT = (
-    '\S+\s+(?P<host>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+(?P<ip>[\w*.:-]+)\s+'
-    '(?P<userid>\S+)\s+\S+\s+\S+\s+\S+\s+"(?P<method>\S+)\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\d+)\s+\S+\s+(?P<length>\S+)\s+'
-    '\S+\s+\S+\s+\S+\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"'
+    r'\S+\s+(?P<host>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+(?P<ip>[\w*.:-]+)\s+'
+    r'(?P<userid>\S+)\s+\S+\s+\S+\s+\S+\s+"(?P<method>\S+)\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\d+)\s+\S+\s+(?P<length>\S+)\s+'
+    r'\S+\s+\S+\s+\S+\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"'
 )
 _ICECAST2_LOG_FORMAT = ( _NCSA_EXTENDED_LOG_FORMAT +
-    '\s+(?P<session_time>[0-9-]+)'
+    r'\s+(?P<session_time>[0-9-]+)'
 )
 _ELB_LOG_FORMAT = (
-    '(?P<date>[0-9-]+T[0-9:]+)\.\S+\s+\S+\s+(?P<ip>[\w*.:-]+):\d+\s+\S+:\d+\s+\S+\s+(?P<generation_time_secs>\S+)\s+\S+\s+'
-    '(?P<status>\d+)\s+\S+\s+\S+\s+(?P<length>\S+)\s+'
-    '"\S+\s+\w+:\/\/(?P<host>[\w\-\.]*):\d+(?P<path>\/\S*)\s+[^"]+"\s+"(?P<user_agent>[^"]+)"\s+\S+\s+\S+'
+    r'(?P<date>[0-9-]+T[0-9:]+)\.\S+\s+\S+\s+(?P<ip>[\w*.:-]+):\d+\s+\S+:\d+\s+\S+\s+(?P<generation_time_secs>\S+)\s+\S+\s+'
+    r'(?P<status>\d+)\s+\S+\s+\S+\s+(?P<length>\S+)\s+'
+    r'"\S+\s+\w+:\/\/(?P<host>[\w\-\.]*):\d+(?P<path>\/\S*)\s+[^"]+"\s+"(?P<user_agent>[^"]+)"\s+\S+\s+\S+'
 )
 
 _OVH_FORMAT = (
-    '(?P<ip>\S+)\s+' + _HOST_PREFIX + '(?P<userid>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+'
-    '"\S+\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\S+)\s+(?P<length>\S+)'
-    '\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"'
+    r'(?P<ip>\S+)\s+' + _HOST_PREFIX + r'(?P<userid>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+'
+    r'"\S+\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\S+)\s+(?P<length>\S+)'
+    r'\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"'
 )
 
 FORMATS = {
@@ -517,6 +517,10 @@ class Configuration(object):
             '--api-url', dest='matomo_api_url',
             help="This URL will be used to send API requests (use it if your tracker URL differs from UI/API url), "
             "eg. http://other-example.com/matomo/ or http://analytics-api.example.net",
+        )
+        option_parser.add_option(
+            '--tracker-endpoint-path', dest='matomo_tracker_endpoint_path', default='/piwik.php',
+            help="The tracker endpoint path to use when tracking. Defaults to /piwik.php."
         )
         option_parser.add_option(
             '--dry-run', dest='dry_run',
@@ -691,9 +695,9 @@ class Configuration(object):
             help="Replay piwik.php requests found in custom logs (only piwik.php requests expected). \nSee https://matomo.org/faq/how-to/faq_17033/"
         )
         option_parser.add_option(
-            '--replay-tracking-expected-tracker-file', dest='replay_tracking_expected_tracker_file', default='piwik.php',
-            help="The expected suffix for tracking request paths. Only logs whose paths end with this will be imported. Defaults "
-            "to 'piwik.php' so only requests to the piwik.php file will be imported."
+            '--replay-tracking-expected-tracker-file', dest='replay_tracking_expected_tracker_file', default=None,
+            help="The expected suffix for tracking request paths. Only logs whose paths end with this will be imported. By default "
+            "requests to the piwik.php file or the matomo.php file will be imported."
         )
         option_parser.add_option(
             '--output', dest='output',
@@ -937,9 +941,9 @@ class Configuration(object):
             self.options.custom_w3c_fields = {}
         elif self.format is not None:
             # validate custom field mappings
-            for custom_name, default_name in self.options.custom_w3c_fields.iteritems():
+            for dummy_custom_name, default_name in self.options.custom_w3c_fields.iteritems():
                 if default_name not in type(format).fields:
-                    fatal_error("custom W3C field mapping error: don't know how to parse and use the '%' field" % default_name)
+                    fatal_error("custom W3C field mapping error: don't know how to parse and use the '%s' field" % default_name)
                     return
 
         if not hasattr(self.options, 'regex_group_to_visit_cvars_map'):
@@ -1322,6 +1326,73 @@ Processing your log data
     def stop_monitor(self):
         self.monitor_stop = True
 
+class UrlHelper(object):
+
+    @staticmethod
+    def convert_array_args(args):
+        """
+        Converts PHP deep query param arrays (eg, w/ names like hsr_ev[abc][0][]=value) into a nested list/dict
+        structure that will convert correctly to JSON.
+        """
+
+        final_args = {}
+        for key, value in args.iteritems():
+            indices = key.split('[')
+            if '[' in key:
+                # contains list of all indices, eg for abc[def][ghi][] = 123, indices would be ['abc', 'def', 'ghi', '']
+                indices = [i.rstrip(']') for i in indices]
+
+                # navigate the multidimensional array final_args, creating lists/dicts when needed, using indices
+                element = final_args
+                for i in range(0, len(indices) - 1):
+                    idx = indices[i]
+
+                    # if there's no next key, then this element is a list, otherwise a dict
+                    element_type = list if not indices[i + 1] else dict
+                    if idx not in element or not isinstance(element[idx], element_type):
+                        element[idx] = element_type()
+
+                    element = element[idx]
+
+                # set the value in the final container we navigated to
+                if not indices[-1]: # last indice is '[]'
+                    element.append(value)
+                else: # last indice has a key, eg, '[abc]'
+                    element[indices[-1]] = value
+            else:
+                final_args[key] = value
+
+        return UrlHelper._convert_dicts_to_arrays(final_args)
+
+    @staticmethod
+    def _convert_dicts_to_arrays(d):
+        # convert dicts that have contiguous integer keys to arrays
+        for key, value in d.iteritems():
+            if not isinstance(value, dict):
+                continue
+
+            if UrlHelper._has_contiguous_int_keys(value):
+                d[key] = UrlHelper._convert_dict_to_array(value)
+            else:
+                d[key] = UrlHelper._convert_dicts_to_arrays(value)
+
+        return d
+
+    @staticmethod
+    def _has_contiguous_int_keys(d):
+        for i in range(0, len(d)):
+            if str(i) not in d:
+                return False
+        return True
+
+    @staticmethod
+    def _convert_dict_to_array(d):
+        result = []
+        for i in range(0, len(d)):
+            result.append(d[str(i)])
+        return result
+
+
 class Matomo(object):
     """
     Make requests to Matomo.
@@ -1330,7 +1401,7 @@ class Matomo(object):
     class Error(Exception):
 
         def __init__(self, message, code = None):
-            super(Exception, self).__init__(message)
+            super(Matomo.Error, self).__init__(message)
 
             self.code = code
 
@@ -1387,7 +1458,7 @@ class Matomo(object):
 
         if auth_user is not None:
             base64string = base64.encodestring('%s:%s' % (auth_user, auth_password)).replace('\n', '')
-            request.add_header("Authorization", "Basic %s" % base64string)        
+            request.add_header("Authorization", "Basic %s" % base64string)
 
         # Use non-default SSL context if invalid certificates shall be
         # accepted.
@@ -1862,7 +1933,7 @@ class Recorder(object):
         if '_cvar' in args and not isinstance(args['_cvar'], basestring):
             args['_cvar'] = json.dumps(args['_cvar'])
 
-        return args
+        return UrlHelper.convert_array_args(args)
 
     def _get_host_with_protocol(self, host, main_url):
         if '://' not in host:
@@ -1886,7 +1957,7 @@ class Recorder(object):
                     args['debug'] = '1'
 
                 response = matomo.call(
-                    '/piwik.php', args=args,
+                    config.options.matomo_tracker_endpoint_path, args=args,
                     expected_content=None,
                     headers={'Content-type': 'application/json'},
                     data=data,
@@ -1934,7 +2005,7 @@ class Recorder(object):
         try:
             json.loads(result)
             return True
-        except ValueError as e:
+        except ValueError:
             return False
 
     def _on_tracking_failure(self, response, data):
@@ -2115,7 +2186,7 @@ class Parser(object):
                     match = candidate_format.check_format_line(lineOrFile)
                 else:
                     match = candidate_format.check_format(lineOrFile)
-            except Exception as e:
+            except Exception:
                 logging.debug('Error in format checking: %s', traceback.format_exc())
                 pass
 
@@ -2455,8 +2526,8 @@ class Parser(object):
 
             if config.options.replay_tracking:
                 # we need a query string and we only consider requests with piwik.php
-                if not hit.query_string or not hit.path.lower().endswith(config.options.replay_tracking_expected_tracker_file):
-                    invalid_line(line, 'no query string, or ' + hit.path.lower() + ' does not end with piwik.php')
+                if not hit.query_string or not self.is_hit_for_tracker(hit):
+                    invalid_line(line, 'no query string, or ' + hit.path.lower() + ' does not end with piwik.php/matomo.php')
                     continue
 
                 query_arguments = urlparse.parse_qs(hit.query_string)
@@ -2484,6 +2555,17 @@ class Parser(object):
         # add last chunk of hits
         if len(hits) > 0:
             Recorder.add_hits(hits)
+
+    def is_hit_for_tracker(self, hit):
+        filesToCheck = ['piwik.php', 'matomo.php']
+        if config.options.replay_tracking_expected_tracker_file:
+            filesToCheck = [config.options.replay_tracking_expected_tracker_file]
+
+        lowerPath = hit.path.lower()
+        for file in filesToCheck:
+            if lowerPath.endswith(file):
+                return True
+        return False
 
     def _add_custom_vars_from_regex_groups(self, hit, format, groups, is_page_var):
         for group_name, custom_var_name in groups.iteritems():

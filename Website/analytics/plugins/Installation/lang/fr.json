@@ -72,6 +72,12 @@
         "SystemCheckCreateFunctionHelp": "Matomo utilise des fonctions anonymes pour les callbacks.",
         "SystemCheckDatabaseExtensions": "Extensions MySQL",
         "SystemCheckDatabaseHelp": "Matomo requiert ou l'extension mysqli ou les extensions pdo et pdo_mysql.",
+        "SystemCheckDatabaseSSL": "Connexion SSL à la base de données",
+        "SystemCheckDatabaseSSLCipher": "Chiffrement SSL utilisé",
+        "SystemCheckDatabaseSSLDisabled": "Le support SSL de votre serveur de base de données est désactivé",
+        "SystemCheckDatabaseSSLNo": "Le serveur de base de données n'est pas compilé avec le support SSL",
+        "SystemCheckDatabaseSSLNotWorking": "%sest définit à \"1\" mais la connexion SSL ne fonctionne pas",
+        "SystemCheckDatabaseSSLOn": "Votre base de donnée support les connexions SSL mais cela n'est pas utilisé. Vérifiez les paramètres de votre base de données dans le fichier de configuration Matomo.",
         "SystemCheckDebugBacktraceHelp": "View::factory ne pourra pas créer des vues pour le module appelé.",
         "SystemCheckError": "Une erreur s'est produite — elle doit être corrigée avant de pouvoir continuer",
         "SystemCheckEvalHelp": "Requis part le système de modèle HTML QuickForm et Smarty.",
@@ -112,7 +118,7 @@
         "SystemCheckSummaryThereWereWarnings": "Il y a des problèmes avec votre système. Matomo va fonctionner, mais vous pourriez rencontrer des problèmes mineurs.",
         "SystemCheckTimeLimitHelp": "Sur un site à trafic important, le processus d'archivage peut prendre plus de temps qu'il n'est déjà autorisé.<br \/> Référez-vous à la configuration max_execution_time de votre php.ini si nécessaire.",
         "SystemCheckTracker": "Statut du traqueur",
-        "SystemCheckTrackerHelp": "La requête GET vers piwik.php a échoué. Essayez d'ajouter cette URL dans la liste blanche de votre authentification HTTP et de désactiver le mod_security (vous pourriez avoir à demander à votre hébergeur). Pour plus d'informations à propos de l'erreur, allez voir les logs d'erreurs du serveur web.",
+        "SystemCheckTrackerHelp": "La requête GET vers matomo.php a échoué. Essayez d'ajouter à la liste de confiance de l'authentification HTTP cette URL et désactivez le mod_security (il est possible que vous ayez besoin de demander à votre hébergeur). Pour plus d'information à propos de l'erreur, consultez le fichier de journalisation des erreurs de votre serveur.",
         "SystemCheckWarnDomHelp": "Vous devriez activer l'extension \"dom\" (ex installez le paquet \"php-dom\" et\/ou \"php-xml\").",
         "SystemCheckWarning": "Matomo fonctionnera normalement mais certaines fonctionnalités seront manquantes",
         "SystemCheckWarnJsonHelp": "Vous devriez activer l'extension \"json\" (ex installez le paquet \"php-json\") pour de meilleures performances.",
@@ -126,7 +132,7 @@
         "SystemCheckCronArchiveProcessCLI": "Gestion des processus via la ligne de commande",
         "SystemCheckPhpSetting": "Pour éviter certaines erreurs critique, vous devez définir les entrées suivantes dans votre fichier php.ini : %s",
         "SystemCheckUpdateHttps": "Mettre à jour via HTTPS",
-        "SystemCheckUpdateHttpsNotSupported": "Matomo ne peut pas utiliser du HTTPS pour se mettre à jour, il va rétrograder vers une mise à jour utilisant du HTTP non sécurisé. Vérifiez que CURL ou allow_url_fopen est supporté et que l'extesion PHP openssl est installée: http:\/\/piwik.org\/faq\/troubleshooting\/faq_177\/",
+        "SystemCheckUpdateHttpsNotSupported": "Matomo n'a pas pu utiliser HTTPS pour effectuer la mise à jour, et va rétrograder vers une mise à jour non sécurisée via HTTP. Vérifiez que CURL ou allow_url_fopen est supporté et que l'extension PHP openssl est installée: https:\/\/matomo.org\/faq\/troubleshooting\/faq_177\/.",
         "NotSupported": "non supporté",
         "Tables": "Création des tables",
         "TablesCreatedSuccess": "Tables créées avec succès !",
@@ -143,6 +149,7 @@
         "WelcomeHelp": "<p>Matomo est une application d'analyse du web Open Source qui vous permet d'obtenir facilement les informations que vous désirez sur vos visiteurs.<\/p>\t<p>Ce procédé est divisé en %s étapes faciles et vous prendra 5 minutes environ.<\/p>",
         "WelcomeToCommunity": "Bienvenue dans la communauté Matomo !",
         "CannotConnectToDb": "Impossible de se connecter à la base de données",
-        "CannotConnectToDbResolvingExplanation": "Cela peut être un problème temporaire, essayer de %1$srafraichir la page%2$s. Si le problème persiste veuillez contacter votre administrateur Matomo."
+        "CannotConnectToDbResolvingExplanation": "Cela peut être un problème temporaire, essayer de %1$srafraichir la page%2$s. Si le problème persiste veuillez contacter votre administrateur Matomo.",
+        "EmailPrivacyNotice": "Votre adresse courriel ne sera utilisée que pour vous envoyer l'infolettre Matomo. Vous pouvez vous désinscrire à tout moment en cliquant sur le lien de désinscription. Nous ne partagerons pas votre courriel avec qui que ce soit d'autre et n'utiliserons pas votre courriel pour tout motif autre que l'infolettre Matomo. Veuillez consulter notre %1$spolitique de respect de la vie privée%2$s pour plus d'information."
     }
 }
