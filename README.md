@@ -1,6 +1,6 @@
 # RailMap.xyz
 
-This repo houses all the data files used for the [railmap.xyz](railmap.xyz) project. This includes all datasets in their exported form, as well as website files.
+This repo houses all the data files used for the [https://railmap.xyz](railmap.xyz) project. This includes all datasets in their exported form, as well as website files.
 
 This repo is **not** software - it is a collection of data. A number of programs are used to develop this data: Google Sheets is used for Station datasets, QGIS for Line datasets, and Mapbox to style the data. Trello keeps track of the project.
 
@@ -283,4 +283,4 @@ This readme was updated for verion 0.11. Version 1 will be released when a subst
 
 ## License
 
-This project is licensed under the Creative Commons Zero v1.0 Universal license. See the [License.md](License.md) file for details.
+This project is licensed under the Creative Commons Zero v1.0 Universal license. See the [License.md](LICENSE.md) file for details.
