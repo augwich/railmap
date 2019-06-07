@@ -41,6 +41,7 @@ All Station data is collected in Google Sheets which you can access [here](https
 
 Station coordinates are retrieved from QGIS, and copied into Google Sheets. These station data files are also present as .gpkg files.
 
+```
 **STATION VALUES**
 *updated for version 0.11*
 
@@ -126,12 +127,13 @@ c) the total number of hours in which a train serves this station in a single da
 
 18. Web Link (HTML) [string]
  - a simple HTML version of 15.
-
+```
 
 ### Lines
 
 All line data is developed through QGIS, and saved as .gpkg files. The builds are exported as .geojson files for use with Mapbox.
 
+```
 **LINE VALUES**
 *updated for version 0.11*
 
@@ -181,12 +183,13 @@ All line data is developed through QGIS, and saved as .gpkg files. The builds ar
  - See the [Dataset Category](https://trello.com/c/PLDbhUPZ) card for system codes.
 
 **NOTE:** Offset line features 20 units in QGIS
-
+```
 
 ### Connections
 
 All connection datasets are developed in QGIS, and saved as .gpkg files. As with lines, the builds are exported as .geojson files for use with Mapbox.
 
+```
 **CONNECTION VALUES**
 *updated for version 0.11*
 
@@ -195,7 +198,7 @@ All connection datasets are developed in QGIS, and saved as .gpkg files. As with
 	- Possible values: Transfer (Local), Transfer (Protected)
 	- Protected: transfers within the system and/or station complex. Typically fare-protected if within the same system
 	- Local: A typical connection due to station proximity, but not within the same station. Typically not fare protected (or may only be at certain times).
-
+```
 
 ### Dataset Categories / System Codes
 
@@ -205,6 +208,7 @@ Below is a list of all currently-assigned system codes, as of v0.11. Please see 
 
 For data that is cataloged outside of Trello, the datasets are broken into categories that correspond to current (2018) Federal Census Bureau categories. These are as follows:
 
+```
 - New England (Northeast): CT, MA, ME, NH, RI, VT (Station ID# 1001 - 1700)
  - NE01 - Amtrak
  - NE02 - MBTA Subway
@@ -256,7 +260,7 @@ Note: Subcategories are used only to break up data that would otherwise be too l
 Note: Italics mark systems whose line data, while spread across that particular dataset category, is only present in another category (i.e. line data is not broken up even if it crosses categories, but rather is kept in the primary category)
 
 Note: Unlike other lines, Amtrak *is* broken up between categories, as the feature set would cover too large of a coordinate range otherwise. Amtrak is always listed as "XX01" for each respective category
-
+```
 
 ## Contributions
 
