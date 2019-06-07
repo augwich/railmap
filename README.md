@@ -1,6 +1,6 @@
 # RailMap.xyz
 
-This repo houses all the data files used for the [https://railmap.xyz](railmap.xyz) project. This includes all datasets in their exported form, as well as website files.
+This repo houses all the data files used for the [railmap.xyz](https://railmap.xyz) project. This includes all datasets in their exported form, as well as website files.
 
 This repo is **not** software - it is a collection of data. A number of programs are used to develop this data: Google Sheets is used for Station datasets, QGIS for Line datasets, and Mapbox to style the data. Trello keeps track of the project.
 
