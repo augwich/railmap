@@ -1,0 +1,21 @@
+
+/* TEAM */
+
+Main Developer: August Rulewich.
+Contact: https://trello.com/b/GinKUKvq/usa-rail-project @AugustDev, 
+Location: Massachusetts, United States
+
+
+/* THANKS */
+
+Name: name or url
+
+
+/* SITE */
+
+Last update: 2019/06/21
+Language: English (US)
+Components: Semantic UI, jQuery, Matomo
+Software: Mapbox, QGIS, Google Sheets
+Dataset: https://github.com/augwich/railmap/tree/master/Data
+Roadmap: https://trello.com/b/GinKUKvq/usa-rail-project

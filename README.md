@@ -2,7 +2,7 @@
 
 This repo houses all the data files used for the [railmap.xyz](https://railmap.xyz) project. This includes all datasets in their exported form, as well as website files.
 
-This repo is **not** software - it is a collection of data. A number of programs are used to develop this data: Google Sheets is used for Station datasets, QGIS for Line datasets, and Mapbox to style the data. Trello keeps track of the project.
+A number of programs are used to develop this data: Google Sheets is used for Station datasets, QGIS for Line datasets, and Mapbox to style the data. Trello keeps track of the project.
 
 
 ## How to Use
@@ -206,8 +206,6 @@ To ease the accessing/filtering of data, all systems are assigned a unique "Syst
 
 Below is a list of all currently-assigned system codes, as of v0.11. Please see [this Trello card](https://trello.com/c/PLDbhUPZ) for the most recent list.
 
-For data that is cataloged outside of Trello, the datasets are broken into categories that correspond to current (2018) Federal Census Bureau categories. These are as follows:
-
 ```
 - New England (Northeast): CT, MA, ME, NH, RI, VT (Station ID# 1001 - 1700)
  - NE01 - Amtrak
@@ -255,8 +253,6 @@ For data that is cataloged outside of Trello, the datasets are broken into categ
 - Pacific (West): AK, CA, HI, OR, WA (Id 9000)
  - PA01 - Amtrak
 
-Note: Subcategories are used only to break up data that would otherwise be too large to package (currently only used for line datasets).
-
 Note: Italics mark systems whose line data, while spread across that particular dataset category, is only present in another category (i.e. line data is not broken up even if it crosses categories, but rather is kept in the primary category)
 
 Note: Unlike other lines, Amtrak *is* broken up between categories, as the feature set would cover too large of a coordinate range otherwise. Amtrak is always listed as "XX01" for each respective category
@@ -273,7 +269,7 @@ Currently, assistance is being sought for the following:
 
 ## Version
 
-This readme was updated for verion 0.11. Version 1 will be released when a substatial portion of the dataset and map has been completed.
+This readme was updated for verion 0.11. Version 1 will be released when a substantial enough portion of the dataset and map has been completed.
 
 
 ## Authors
