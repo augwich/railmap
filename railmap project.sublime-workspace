@@ -196,48 +196,19 @@
 	"buffers":
 	[
 		{
-			"contents": "Package Control Messages\n========================\n\nTheme - Spacegray\n-----------------\n\n  Thanks for installing Spacegray!\n  \n  \n  How to activate\n  ===============\n  \n  Activate the UI theme and color scheme by modifying your user preferences file, which you can find using the menu item `Sublime Text -> Preferences -> Settings - User` (⌘+, on Mac).\n  \n  Spacegray comes in different flavors, based on Base16 color schemes. You can choose whichever flavor you like, but don't forget to change *both* color scheme and UI theme so they match.\n  \n  *Note: Don't forget to restart Sublime Text after activating the theme.*\n  \n  \n  Spacegray\n  ---------\n  \n  Default flavor based on Base16 Ocean Dark color scheme.\n  \n  *Example settings*\n  \n      {\n        \"theme\": \"Spacegray.sublime-theme\",\n        \"color_scheme\": \"Packages/Theme - Spacegray/base16-ocean.dark.tmTheme\"\n      }\n  \n  \n  Spacegray Light\n  ---------------\n  \n  Light variation based on Base16 Ocean Light color scheme.\n  \n  *Example settings*\n  \n      {\n        \"theme\": \"Spacegray Light.sublime-theme\",\n        \"color_scheme\": \"Packages/Theme - Spacegray/base16-ocean.light.tmTheme\"\n      }\n  \n  \n  Spacegray Eighties\n  ------------------\n  \n  A variation based on Base16 Eighties Dark color scheme.\n  \n  *Example settings*\n  \n      {\n        \"theme\": \"Spacegray Eighties.sublime-theme\",\n        \"color_scheme\": \"Packages/Theme - Spacegray/base16-eighties.dark.tmTheme\"\n      }\n  \n  \n  *Note: Don't forget to restart Sublime Text after activating the theme.*\n",
+			"file": "Website/faq.html",
 			"settings":
 			{
-				"buffer_size": 1524,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
+				"buffer_size": 10014,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 6305,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/faq.html",
-			"settings":
-			{
-				"buffer_size": 7513,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/humans.txt",
-			"settings":
-			{
-				"buffer_size": 443,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/robots.txt",
-			"settings":
-			{
-				"buffer_size": 24,
+				"buffer_size": 8316,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -301,6 +272,12 @@
 	],
 	"file_history":
 	[
+		"/F/Videos/Tutorials/OSM in Rhino/Part 2 - Elk and Rhino.txt",
+		"/F/Videos/Tutorials/OSM in Rhino/Part 1 - JOSM.txt",
+		"/F/Projects/Rail Map/Website/humans.txt",
+		"/F/Projects/Rail Map/Website/robots.txt",
+		"/F/Projects/Rail Map/Website/index.html",
+		"/F/Videos/Movies/Star Wars/HARMY-DEED-IV-V2.7-MKV-MANUAL/Star Wars Despecialized 2.7 MKV/SW 2.7 Readme.txt",
 		"/C/Users/Augwich/Desktop/semantic-sandbox/index.html",
 		"/F/Projects/Rail Map/Website/faq.html",
 		"/C/Users/Augwich/AppData/Local/Introversion/Prison Architect/mods/Materials+/data/language/base-language.txt",
@@ -333,7 +310,6 @@
 		"/C/Users/Augwich/Desktop/Games/Minecraft/Why Aren't We Bees/eula.txt",
 		"/C/Users/Augwich/Desktop/Board Games",
 		"/C/Users/Augwich/Desktop/Rail Map/Station Data Field_Value List",
-		"/F/Videos/Movies/Star Wars/HARMY-DEED-IV-V2.7-MKV-MANUAL/Star Wars Despecialized 2.7 MKV/SW 2.7 Readme.txt",
 		"/F/Website/projects.php",
 		"/F/Website/header.php",
 		"/C/Users/Augwich/Dropbox/Firms.txt",
@@ -423,12 +399,7 @@
 		"/F/Website/projects/ad2-filtration/stage2.php",
 		"/F/Website/projects/ad2-filtration/ad2.html",
 		"/F/Website/projects/ad2-filtration/ad2.php",
-		"/F/Website/projects/ad3-2.html",
-		"/F/Website/projects/ad3-habitat-67/ad3.html",
-		"/C/Users/Augwich/Dropbox/Building the Border Wall/topo source links.txt",
-		"/C/Users/Augwich/Dropbox/Building the Border Wall/topo source links",
-		"/F/Website/Projects/project.css",
-		"/F/Website/Projects/AD2 - Filtration/stage1.php"
+		"/F/Website/projects/ad3-2.html"
 	],
 	"find":
 	{
@@ -446,6 +417,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<div class=\"title\">\n\t\t\t\t<i class=\"dropdown icon\"></i>\n\t\t\t\tWhere can I see upcoming features?\n\t\t\t</div>\n\t\t\t<div class=\"content\">\n\t\t\t\t<p>\n\t\t\t\t\tCheck out the <a href=\"https://trello.com/b/GinKUKvq\">Trello Board</a>. It's usually pretty up-to-date on our progress, both currently implemented features as well as planned ones. \n\t\t\t\t</p>\n\t\t\t</div>",
+			"accordion",
 			">\n",
 			"  \n",
 			"Render looking from ATMA towards the river",
@@ -549,32 +522,30 @@
 			[
 				{
 					"buffer": 0,
+					"file": "Website/faq.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1524,
+						"buffer_size": 10014,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1524,
-								1524
+								7865,
+								7865
 							]
 						],
 						"settings":
 						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -583,110 +554,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6305,
+						"buffer_size": 8316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3678,
-								3678
+								4868,
+								4868
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 792.0,
+						"translation.y": 909.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Website/faq.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7513,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5302,
-								5302
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Website/humans.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Website/robots.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16,
-								16
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
