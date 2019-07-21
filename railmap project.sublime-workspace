@@ -208,9 +208,27 @@
 			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 8323,
+				"buffer_size": 8324,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Data/Stations/Builds/Connections_MA_build 0.4.geojson",
+			"settings":
+			{
+				"buffer_size": 9316,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Data/Lines/Builds/Lines_MA_build 1.1.geojson",
+			"settings":
+			{
+				"buffer_size": 485770,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -272,6 +290,7 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.1.geojson",
 		"/F/Videos/Tutorials/OSM in Rhino/Part 2 - Elk and Rhino.txt",
 		"/F/Videos/Tutorials/OSM in Rhino/Part 1 - JOSM.txt",
 		"/F/Projects/Rail Map/Website/humans.txt",
@@ -398,8 +417,7 @@
 		"/F/Website/projects/ad2-filtration/stage3.php",
 		"/F/Website/projects/ad2-filtration/stage2.php",
 		"/F/Website/projects/ad2-filtration/ad2.html",
-		"/F/Website/projects/ad2-filtration/ad2.php",
-		"/F/Website/projects/ad3-2.html"
+		"/F/Website/projects/ad2-filtration/ad2.php"
 	],
 	"find":
 	{
@@ -545,7 +563,7 @@
 						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -554,15 +572,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8323,
+						"buffer_size": 8324,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2346,
-								2346
+								1946,
+								1946
 							]
 						],
 						"settings":
@@ -571,10 +589,66 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1455.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Data/Stations/Builds/Connections_MA_build 0.4.geojson",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Data/Lines/Builds/Lines_MA_build 1.1.geojson",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 485770,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
