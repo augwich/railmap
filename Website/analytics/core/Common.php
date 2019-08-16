@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -635,7 +635,6 @@ class Common
 
     /**
      * Generate random string.
-     * Do not use for security related purposes (the string is not truly random).
      *
      * @param int $length string length
      * @param string $alphabet characters allowed in random string

@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -184,6 +184,7 @@ class Twig
         $this->twig->addFilter(new Twig_SimpleFilter('implode', 'implode'));
         $this->twig->addFilter(new Twig_SimpleFilter('ucwords', 'ucwords'));
         $this->twig->addFilter(new Twig_SimpleFilter('lcfirst', 'lcfirst'));
+        $this->twig->addFilter(new Twig_SimpleFilter('ucfirst', 'ucfirst'));
 
         $this->addFunction_includeAssets();
         $this->addFunction_linkTo();
@@ -540,8 +541,9 @@ class Twig
         $pluginManager = \Piwik\Plugin\Manager::getInstance();
         $plugins = $pluginManager->getAllPluginsNames();
 
+        $pluginsDir = Manager::getPluginDirectory($pluginName);
+
         foreach ($plugins as $name) {
-            $pluginsDir = Manager::getPluginDirectory($name);
             $path = sprintf("%s/templates/plugins/%s/", $pluginsDir, $name);
             if (is_dir($path)) {
                 $loader->addPath(rtrim($path, '/'), $name);

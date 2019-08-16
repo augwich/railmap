@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -54,6 +54,10 @@ class Session extends Zend_Session
             return;
         }
         self::$sessionStarted = true;
+    
+        if (defined('PIWIK_SESSION_NAME')) {
+            self::$sessionName = PIWIK_SESSION_NAME;
+        }
 
         $config = Config::getInstance();
 

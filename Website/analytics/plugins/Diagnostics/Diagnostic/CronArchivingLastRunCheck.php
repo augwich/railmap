@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -70,7 +70,11 @@ class CronArchivingLastRunCheck implements Diagnostic
         $diffTimePretty = $formatter->getPrettyTimeFromSeconds($diffTime);
 
         $errorComment = $this->translator->translate('Diagnostics_CronArchivingHasNotRunInAWhile', [$lastRunTimePretty, $diffTimePretty])
-            . '<br/><br/>' . $this->translator->translate('Diagnostics_CronArchivingRunDetails', [$coreArchiveShort, $mailto, $commandToRerun]);
+            . '<br/><br/>' .
+            $this->translator->translate(
+                'Diagnostics_CronArchivingRunDetails',
+                [$coreArchiveShort, $mailto, $commandToRerun, '<a href="https://matomo.org/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']
+            );
 
         // check archiving has been run recently
         if ($diffTime > self::SECONDS_IN_DAY * 2) {

@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -307,6 +307,7 @@ class ArchivingHelper
 
     public static $maximumRowsInDataTableLevelZero;
     public static $maximumRowsInSubDataTable;
+    public static $maximumRowsInDataTableSiteSearch;
     public static $columnToSortByBeforeTruncation;
 
     protected static $actionUrlCategoryDelimiter = null;
@@ -330,6 +331,7 @@ class ArchivingHelper
         self::$columnToSortByBeforeTruncation = PiwikMetrics::INDEX_NB_VISITS;
         self::$maximumRowsInDataTableLevelZero = Config::getInstance()->General['datatable_archiving_maximum_rows_actions'];
         self::$maximumRowsInSubDataTable = Config::getInstance()->General['datatable_archiving_maximum_rows_subtable_actions'];
+        self::$maximumRowsInDataTableSiteSearch = Config::getInstance()->General['datatable_archiving_maximum_rows_site_search'];
 
         DataTable::setMaximumDepthLevelAllowedAtLeast(self::getSubCategoryLevelLimit() + 1);
     }
@@ -366,7 +368,7 @@ class ArchivingHelper
      * @param int $actionType
      * @param int $urlPrefix
      * @param array $actionsTablesByType
-     * @return DataTable
+     * @return DataTable\Row
      */
     public static function getActionRow($actionName, $actionType, $urlPrefix = null, &$actionsTablesByType)
     {
@@ -641,5 +643,24 @@ class ArchivingHelper
         }
 
         return $name;
+    }
+
+    public static function setFolderPathMetadata(DataTable $dataTable, $isUrl, $prefix = '')
+    {
+        $configGeneral = Config::getInstance()->General;
+        $separator = $isUrl ? '/' : $configGeneral['action_title_category_delimiter'];
+        $metadataName = $isUrl ? 'folder_url_start' : 'page_title_path';
+
+        foreach ($dataTable->getRows() as $row) {
+            $subtable = $row->getSubtable();
+            if (!$subtable) {
+                continue;
+            }
+
+            $metadataValue = $prefix . $row->getColumn('label');
+            $row->setMetadata($metadataName, $metadataValue);
+
+            self::setFolderPathMetadata($subtable, $isUrl, $metadataValue . $separator);
+        }
     }
 }

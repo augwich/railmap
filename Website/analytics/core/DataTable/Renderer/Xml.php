@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -370,7 +370,11 @@ class Xml extends Renderer
                 foreach ($row as $name => $value) {
                     // handle the recursive dataTable case by XML outputting the recursive table
                     if (is_array($value)) {
-                        $value = "\n" . $this->renderDataTable($value, $prefixLine . "\t\t");
+                        if (is_array(reset($value))) {
+                            $value = "\n" . $this->renderDataTable($value, $prefixLine . "\t\t");
+                        } else {
+                            $value = "\n" . $this->renderArray($value, $prefixLine . "\t\t");
+                        }
                         $value .= $prefixLine . "\t\t";
                     } else {
                         $value = self::formatValueXml($value);

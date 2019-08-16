@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset=UTF-8>
-	<title>RAILMAP.xyz</title>
+	<title>RAILMAP.xyz - Passenger Rail in the United States</title>
 	<link rel="author" type="text/plain" href="humans.txt">
 	<meta name="description" content="A map of all passenger rail (Amtrak, Commuter, Light Rail, Subway, etc.) networks in the United States.">
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -21,6 +21,22 @@
 	<style>
 		#map {position:absolute; width:100%; margin-top:40px }
 	</style>
+
+	<!-- Matomo -->
+	<script type="text/javascript">
+	  var _paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//www.railmap.xyz/analytics/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '1']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
 
 </head>
 
@@ -123,9 +139,9 @@
 
 	<!-- Modal element -->
 	<div id="project-overview-modal" class="ui modal">
-		<div class="header">
+		<h1 class="header">
 			Project Overview
-		</div>
+		</h1>
 		<div class="content">
 			<p>Railmap.xyz seeks to be a synthesis of all passenger rail systems in the United States. The idea is to allow the user to easily view and browse all passenger rail systems (intercity, commuter, light, heavy, and others) in a single map, and to glean additional information about these systems and how they interact. </p>
 			<p>This project is currently under development, with updates being regularly released as available. Currently, the map shows data for portions of the northeast. Eventually, however, this will be expanded to include all US States. </p>

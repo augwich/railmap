@@ -37,11 +37,13 @@ class Browser extends ClientParserAbstract
         'AM' => 'Amaya',
         'AO' => 'Amigo',
         'AN' => 'Android Browser',
+        'AD' => 'AOL Shield',
         'AR' => 'Arora',
         'AV' => 'Amiga Voyager',
         'AW' => 'Amiga Aweb',
         'AT' => 'Atomic Web Browser',
         'AS' => 'Avast Secure Browser',
+        'BA' => 'Beaker Browser',
         'BB' => 'BlackBerry Browser',
         'BD' => 'Baidu Browser',
         'BS' => 'Baidu Spark',
@@ -85,6 +87,7 @@ class Browser extends ClientParserAbstract
         'FE' => 'Fennec',
         'FF' => 'Firefox',
         'FK' => 'Firefox Focus',
+        'FR' => 'Firefox Rocket',
         'FL' => 'Flock',
         'FM' => 'Firefox Mobile',
         'FW' => 'Fireweb',
@@ -161,6 +164,7 @@ class Browser extends ClientParserAbstract
         'QQ' => 'QQ Browser',
         'QT' => 'Qutebrowser',
         'QZ' => 'QupZilla',
+        'QM' => 'Qwant Mobile',
         'RK' => 'Rekonq',
         'RM' => 'RockMelt',
         'SB' => 'Samsung Browser',
@@ -178,6 +182,8 @@ class Browser extends ClientParserAbstract
         'SP' => 'SuperBird',
         'ST' => 'Streamy',
         'SX' => 'Swiftfox',
+        'TF' => 'TenFourFox',
+        'TB' => 'Tenta Browser',
         'TZ' => 'Tizen Browser',
         'TS' => 'TweakStyle',
         'UC' => 'UC Browser',
@@ -201,8 +207,8 @@ class Browser extends ClientParserAbstract
         'BlackBerry Browser' => array('BB'),
         'Baidu'              => array('BD', 'BS'),
         'Amiga'              => array('AV', 'AW'),
-        'Chrome'             => array('CH', 'BR', 'CC', 'CD', 'CM', 'CI', 'CF', 'CN', 'CR', 'CP', 'IR', 'RM', 'AO', 'TS', 'VI', 'PT', 'AS'),
-        'Firefox'            => array('FF', 'FE', 'FM', 'SX', 'FB', 'PX', 'MB', 'EI', 'WF', 'CU'),
+        'Chrome'             => array('CH', 'BA', 'BR', 'CC', 'CD', 'CM', 'CI', 'CF', 'CN', 'CR', 'CP', 'IR', 'RM', 'AO', 'TS', 'VI', 'PT', 'AS', 'TB', 'AD', 'SB'),
+        'Firefox'            => array('FF', 'FE', 'FM', 'SX', 'FB', 'PX', 'MB', 'EI', 'WF', 'CU', 'TF', 'QM', 'FR'),
         'Internet Explorer'  => array('IE', 'IM', 'PS'),
         'Konqueror'          => array('KO'),
         'NetFront'           => array('NF'),
@@ -210,7 +216,7 @@ class Browser extends ClientParserAbstract
         'Nokia Browser'      => array('NB', 'NO', 'NV', 'DO'),
         'Opera'              => array('OP', 'OM', 'OI', 'ON', 'OO'),
         'Safari'             => array('SF', 'MF'),
-        'Sailfish Browser'   => array('SA'),
+        'Sailfish Browser'   => array('SA')
     );
 
     /**
@@ -219,7 +225,7 @@ class Browser extends ClientParserAbstract
      * @var array
      */
     protected static $mobileOnlyBrowsers = array(
-        '36', 'PU', 'SK', 'MF', 'OI', 'OM', 'DB', 'ST', 'BL', 'IV', 'FM', 'C1', 'AL', 'SA'
+        '36', 'PU', 'SK', 'MF', 'OI', 'OM', 'DB', 'ST', 'BL', 'IV', 'FM', 'C1', 'AL', 'SA', 'SB', 'FR'
     );
 
     /**
@@ -298,7 +304,7 @@ class Browser extends ClientParserAbstract
         }
 
         // This Exception should never be thrown. If so a defined browser name is missing in $availableBrowsers
-        throw new \Exception('Detected browser name was not found in $availableBrowsers'); // @codeCoverageIgnore
+        throw new \Exception('Detected browser name was not found in $availableBrowsers. Tried to parse user agent: '.$this->userAgent); // @codeCoverageIgnore
     }
 
     protected function buildEngine($engineData, $browserVersion)

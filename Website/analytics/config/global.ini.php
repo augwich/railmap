@@ -21,22 +21,61 @@ port = 3306
 adapter = PDO\MYSQL
 type = InnoDB
 schema = Mysql
+
+; Database SSL Options START
+; Turn on or off SSL connection to database, possible values for enable_ssl: 1 or 0
+enable_ssl = 0
+; Direct path to server CA file, CA bundle supported (required for ssl connection)
+ssl_ca =
+; Direct path to client cert file (optional)
+ssl_cert =
+; Direct path to client key file (optional)
+ssl_key =
+; Direct path to CA cert files directory (optional)
+ssl_ca_path =
+; List of one or more ciphers for SSL encryption, in OpenSSL format (optional)
+ssl_cipher =
+; Whether to skip verification of self signed certificates (optional, only supported
+; w/ specific PHP versions, and is mostly for testing purposes)
+ssl_no_verify =
+; Database SSL Options END
+
 ; if charset is set to utf8, Matomo will ensure that it is storing its data using UTF8 charset.
 ; it will add a sql query SET at each page view.
 ; Matomo should work correctly without this setting but we recommend to have a charset set.
 charset = utf8
 
+; If configured, the following queries will be executed on the reader instead of the writer.
+; * archiving queries that hit a log table
+; * live queries that hit a log table
+; * fetching of archives when viewing a report
+; You only want to enable a reader if you can ensure there is minimal replication lag / delay on the reader.
+; Otherwise you might get corrupt data in the reports.
+[database_reader]
+host =
+username =
+password =
+dbname =
+port = 3306
+
 [database_tests]
 host = localhost
 username = "@USERNAME@"
 password =
-dbname = piwik_tests
-tables_prefix = piwiktests_
+dbname = matomo_tests
+tables_prefix = matomotests_
 port = 3306
 adapter = PDO\MYSQL
 type = InnoDB
 schema = Mysql
 charset = utf8
+enable_ssl = 0
+ssl_ca =
+ssl_cert =
+ssl_key =
+ssl_ca_path =
+ssl_cipher =
+ssl_no_verify = 1
 
 [tests]
 ; needed in order to run tests.
@@ -46,6 +85,7 @@ http_host   = localhost
 remote_addr = "127.0.0.1"
 request_uri = "@REQUEST_URI@"
 port =
+enable_logging = 0
 
 ; access key and secret as listed in AWS -> IAM -> Users
 aws_accesskey = ""
@@ -66,10 +106,16 @@ log_writers[] = screen
 ; log level, everything logged w/ this level or one of greater severity
 ; will be logged. everything else will be ignored. possible values are:
 ; ERROR, WARN, INFO, DEBUG
+; this setting will apply to every log writer, if there is no specific log level defined for a writer.
 log_level = WARN
 
+; you can also set specific log levels for different writers, by appending the writer name to log_level_, like so:
+; this allows you to log more information to one backend vs another.
+; log_level_screen =
+; log_level_file =
+
 ; if configured to log in a file, log entries will be made to this file
-logger_file_path = tmp/logs/piwik.log
+logger_file_path = tmp/logs/matomo.log
 
 [Cache]
 ; available backends are 'file', 'array', 'null', 'redis', 'chained'
@@ -111,11 +157,18 @@ always_archive_data_range = 0;
 ; NOTE: you must also set [log] log_writers[] = "screen" to enable the profiler to print on screen
 enable_sql_profiler = 0
 
-; If set to 1, all requests to piwik.php will be forced to be 'new visitors'
+; If set to 1, all requests to matomo.php will be forced to be 'new visitors'
 tracker_always_new_visitor = 0
 
 ; if set to 1, all SQL queries will be logged using the DEBUG log level
 log_sql_queries = 0
+
+; if set to 1, core:archive profiling information will be recorded in a log file. the log file is determined by the
+; archive_profiling_log option.
+archiving_profile = 0
+
+; if set to an absolute path, core:archive profiling information will be logged to specified file
+archive_profiling_log =
 
 [DebugTests]
 ; When set to 1, standalone plugins (those with their own git repositories)
@@ -178,7 +231,7 @@ release_channel = "latest_stable"
 action_url_category_delimiter = /
 
 ; similar to above, but this delimiter is only used for page titles in the Actions > Page titles report
-action_title_category_delimiter = /
+action_title_category_delimiter = ""
 
 ; the maximum url category depth to track. if this is set to 2, then a url such as
 ; "example.com/blog/development/first-post" would be treated as "example.com/blog/development".
@@ -205,6 +258,9 @@ anonymous_user_enable_use_segments_API = 1
 ; You can force the browser archiving to be disabled in most cases by setting this setting to 1
 ; The only time that the browser will still trigger archiving is when requesting a custom date range that is not pre-processed yet
 browser_archiving_disabled_enforce = 0
+
+; Add custom currencies to Sites Manager.
+currencies[BTC] = Bitcoin
 
 ; By default, users can create Segments which are to be processed in Real-time.
 ; Setting this to 0 will force all newly created Custom Segments to be "Pre-processed (faster, requires archive.php cron)"
@@ -273,7 +329,7 @@ default_period = day
 ; Time in seconds after which an archive will be computed again. This setting is used only for today's statistics.
 ; This setting is overriden in the UI, under "General Settings".
 ; This setting is only used if it hasn't been overriden via the UI yet, or if enable_general_settings_admin=0
-time_before_today_archive_considered_outdated = 150
+time_before_today_archive_considered_outdated = 900
 
 ; Time in seconds after which an archive will be computed again. This setting is used only for week's statistics.
 ; If set to "-1" (default), it will fall back to the UI setting under "General settings" unless enable_general_settings_admin=0
@@ -334,9 +390,9 @@ disable_checks_usernames_attributes = 0
 ; For legacy data, fallback or non-security scenarios, we use md5.
 hash_algorithm = whirlpool
 
-; by default, Matomo uses PHP's built-in file-based session save handler with lock files.
-; For clusters, use dbtable.
-session_save_handler = files
+; Matomo uses PHP's dbtable for session.
+; If you prefer configuring sessions through the php.ini directly, you may unset this value to an empty string
+session_save_handler = dbtable
 
 ; If set to 1, Matomo will automatically redirect all http:// requests to https://
 ; If SSL / https is not correctly configured on the server, this will break Matomo
@@ -344,16 +400,19 @@ session_save_handler = files
 ; it is recommended for security reasons to always use Matomo over https
 force_ssl = 0
 
-; login cookie name
+; (DEPRECATED) has no effect
 login_cookie_name = piwik_auth
 
 ; By default, the auth cookie is set only for the duration of session.
 ; if "Remember me" is checked, the auth cookie will be valid for 14 days by default
 login_cookie_expire = 1209600
 
-; The path on the server in which the cookie will be available on.
-; Defaults to empty. See spec in https://curl.haxx.se/rfc/cookie_spec.html
+; Sets the session cookie path
 login_cookie_path =
+
+; the amount of time before an idle session is considered expired. only affects session that were created without the
+; "remember me" option checked
+login_session_not_remembered_idle_timeout = 3600
 
 ; email address that appears as a Sender in the password recovery email
 ; if specified, {DOMAIN} will be replaced by the current Matomo domain
@@ -368,7 +427,9 @@ login_password_recovery_replyto_email_address = "no-reply@{DOMAIN}"
 login_password_recovery_replyto_email_name = "No-reply"
 
 ; When configured, only users from a configured IP can log into your Matomo. You can define one or multiple
-; IPv4, IPv6, and IP ranges. This whitelist also affects API requests unless you disabled it via the setting
+; IPv4, IPv6, and IP ranges. You may also define hostnames. However, resolving hostnames in each request 
+; may slightly slow down your Matomo.
+; This whitelist also affects API requests unless you disabled it via the setting
 ; "login_whitelist_apply_to_reporting_api_requests" below. Note that neither this setting, nor the
 ; "login_whitelist_apply_to_reporting_api_requests" restricts authenticated tracking requests (tracking requests
 ; with a "token_auth" URL parameter).
@@ -378,6 +439,7 @@ login_password_recovery_replyto_email_name = "No-reply"
 ; login_whitelist_ip[] = 204.93.177.0/24
 ; login_whitelist_ip[] = 199.27.128.0/21
 ; login_whitelist_ip[] = 2001:db8::/48
+; login_whitelist_ip[] = matomo.org
 
 ; By default, if a whitelisted IP address is specified via "login_whitelist_ip[]", the reporting user interface as
 ; well as HTTP Reporting API requests will only work for these whitelisted IPs.
@@ -397,13 +459,19 @@ enable_framed_pages = 0
 enable_framed_settings = 0
 
 ; language cookie name for session
-language_cookie_name = piwik_lang
+language_cookie_name = matomo_lang
 
 ; standard email address displayed when sending emails
 noreply_email_address = "noreply@{DOMAIN}"
 
 ; standard email name displayed when sending emails. If not set, a default name will be used.
 noreply_email_name = ""
+
+; set to 0 to disable sending of all emails. useful for testing.
+emails_enabled = 1
+
+; set to 0 to disable sending of emails when a password or email is changed
+enable_update_users_email = 1
 
 ; feedback email address;
 ; when testing, use your own email address or "nobody"
@@ -438,11 +506,13 @@ datatable_archiving_maximum_rows_actions = 500
 ; note: should not exceed the display limit in Piwik\Actions\Controller::ACTIONS_REPORT_ROWS_DISPLAY
 ; because each subdirectory doesn't have paging at the bottom, so all data should be displayed if possible.
 datatable_archiving_maximum_rows_subtable_actions = 100
+; maximum number of rows for the Site Search table
+datatable_archiving_maximum_rows_site_search = 500
 
 ; maximum number of rows for any of the Events tables (Categories, Actions, Names)
 datatable_archiving_maximum_rows_events = 500
 ; maximum number of rows for sub-tables of the Events tables (eg. for the subtables Categories>Actions or Categories>Names).
-datatable_archiving_maximum_rows_subtable_events = 100
+datatable_archiving_maximum_rows_subtable_events = 500
 
 ; maximum number of rows for other tables (Providers, User settings configurations)
 datatable_archiving_maximum_rows_standard = 500
@@ -557,6 +627,9 @@ graphs_default_period_to_plot_when_period_range = day
 ; within the selected period instead of the evolution across the last n periods.
 graphs_show_evolution_within_selected_period = 0
 
+; This option controls the default number of days in the past to show in evolution graphs generated by the ImageGraph plugin
+graphs_default_evolution_graph_last_days_amount = 30
+
 ; The Overlay plugin shows the Top X following pages, Top X downloads and Top X outlinks which followed
 ; a view of the current page. The value X can be set here.
 overlay_following_pages_limit = 300
@@ -596,14 +669,15 @@ enable_installer = 1
 ; By setting this option to 0, you can prevent Super User from editing the Geolocation settings.
 enable_geolocation_admin = 1
 
-; By setting this option to 0, the old log data and old report data features will be hidden from the UI
+; By setting this option to 0, the old raw data and old report data purging features will be hidden from the UI
 ; Note: log purging and old data purging still occurs, just the Super User cannot change the settings.
 enable_delete_old_data_settings_admin = 1
 
 ; By setting this option to 0, the following settings will be hidden and disabled from being set in the UI:
-; - "Archiving Settings"
-; - "Update settings"
-; - "Email server settings"
+; - Archiving settings
+; - Update settings
+; - Email server settings
+; - Trusted Matomo Hostname
 enable_general_settings_admin = 1
 
 ; Disabling this will disable features like automatic updates for Matomo,
@@ -616,8 +690,6 @@ enable_auto_update = 1
 ; By setting this option to 0, no emails will be sent in case of an available core.
 ; If set to 0 it also disables the "sent plugin update emails" feature in general and the related setting in the UI.
 enable_update_communication = 1
-
-
 
 ; Comma separated list of plugin names for which console commands should be loaded (applies when Matomo is not installed yet)
 always_load_commands_from_plugin=
@@ -636,11 +708,26 @@ pivot_by_filter_default_column_limit = 10
 ; If set to 0 it will disable advertisements for providers of Professional Support for Matomo.
 piwik_professional_support_ads_enabled = 1
 
+; The number of days to wait before sending the JavaScript tracking code email reminder.
+num_days_before_tracking_code_reminder = 5
+
+; The path to a custom cacert.pem file Matomo should use.
+; By default Matomo uses a file extracted from the Firefox browser and provided here: https://curl.haxx.se/docs/caextract.html.
+; The file contains root CAs and is used to determine if the chain of a SSL certificate is valid and it is safe to connect.
+; Most users will not have to use a custom file here, but if you run your Matomo instance behind a proxy server/firewall that
+; breaks and reencrypts SSL connections you can set your custom file here. 
+custom_cacert_pem=
+
+; Whether or not to send weekly emails to superusers about tracking failures.
+; Default is 1.
+enable_tracking_failures_notification = 1
+
+
 [Tracker]
 
 ; Matomo uses "Privacy by default" model. When one of your users visit multiple of your websites tracked in this Matomo,
 ; Matomo will create for this user a fingerprint that will be different across the multiple websites.
-; If you want to track unique users across websites (for example when using the InterSites plugin) you may set this setting to 1.
+; If you want to track unique users across websites you may set this setting to 1.
 ; Note: setting this to 0 increases your users' privacy.
 enable_fingerprinting_across_websites = 0
 
@@ -691,10 +778,12 @@ record_statistics = 1
 ; `_paq.push(['setSessionCookieTimeout', timeoutInSeconds=1800])`
 visit_standard_length = 1800
 
-; The window to look back for a previous visit by this current visitor. Defaults to visit_standard_length.
+; The amount of time in the past to match the current visitor to a known visitor via fingerprint. Defaults to visit_standard_length.
 ; If you are looking for higher accuracy of "returning visitors" metrics, you may set this value to 86400 or more.
 ; This is especially useful when you use the Tracking API where tracking Returning Visitors often depends on this setting.
-; The value window_look_back_for_visitor is used only if it is set to greater than visit_standard_length
+; The value window_look_back_for_visitor is used only if it is set to greater than visit_standard_length.
+; Note: visitors with visitor IDs will be matched by visitor ID from any point in time, this is only for recognizing visitors
+; by device fingerprint.
 window_look_back_for_visitor = 0
 
 ; visitors that stay on the website and view only one page will be considered as time on site of 0 second
@@ -702,7 +791,7 @@ default_time_one_page_visit = 0
 
 ; Comma separated list of URL query string variable names that will be removed from your tracked URLs
 ; By default, Matomo will remove the most common parameters which are known to change often (eg. session ID parameters)
-url_query_parameter_to_exclude_from_url = "gclid,fb_xd_fragment,fb_comment_id,phpsessid,jsessionid,sessionid,aspsessionid,doing_wp_cron,sid,pk_vid"
+url_query_parameter_to_exclude_from_url = "gclid,fbclid,fb_xd_fragment,fb_comment_id,phpsessid,jsessionid,sessionid,aspsessionid,doing_wp_cron,sid,pk_vid"
 
 ; if set to 1, Matomo attempts a "best guess" at the visitor's country of
 ; origin when the preferred language tag omits region information.
@@ -770,6 +859,11 @@ tracking_requests_require_authentication = 1
 ; You can change how far back Matomo will track your requests without authentication. The configured value is in seconds.
 tracking_requests_require_authentication_when_custom_timestamp_newer_than = 86400;
 
+; if set to 1, all the SQL queries will be recorded by the profiler
+; and a profiling summary will be printed at the end of the request
+; NOTE: you must also set "[Tracker] debug = 1" to enable the profiler.
+enable_sql_profiler = 0
+
 [Segments]
 ; Reports with segmentation in API requests are processed in real time.
 ; On high traffic websites it is recommended to pre-process the data
@@ -793,6 +887,8 @@ delete_logs_schedule_lowest_interval = 7
 delete_logs_older_than = 180
 delete_logs_max_rows_per_query = 100000
 enable_auto_database_size_estimate = 1
+enable_database_size_estimate = 1
+delete_logs_unused_actions_schedule_lowest_interval = 30
 
 [Deletereports]
 delete_reports_enable                = 0
@@ -828,6 +924,7 @@ Plugins[] = CorePluginsAdmin
 Plugins[] = CoreAdminHome
 Plugins[] = CoreHome
 Plugins[] = WebsiteMeasurable
+Plugins[] = IntranetMeasurable
 Plugins[] = Diagnostics
 Plugins[] = CoreVisualizations
 Plugins[] = Proxy
@@ -847,6 +944,7 @@ Plugins[] = Ecommerce
 Plugins[] = SEO
 Plugins[] = Events
 Plugins[] = UserCountry
+Plugins[] = GeoIp2
 Plugins[] = VisitsSummary
 Plugins[] = VisitFrequency
 Plugins[] = VisitTime
@@ -857,6 +955,7 @@ Plugins[] = Feedback
 Plugins[] = Monolog
 
 Plugins[] = Login
+Plugins[] = TwoFactorAuth
 Plugins[] = UsersManager
 Plugins[] = SitesManager
 Plugins[] = Installation
@@ -884,6 +983,7 @@ Plugins[] = Marketplace
 Plugins[] = ProfessionalServices
 Plugins[] = UserId
 Plugins[] = CustomPiwikJs
+Plugins[] = Tour
 
 [PluginsInstalled]
 PluginsInstalled[] = Diagnostics
@@ -903,4 +1003,3 @@ SDK_batch_size = 10
 SDK_interval_value = 30
 
 ; NOTE: do not directly edit this file! See notice at the top
-

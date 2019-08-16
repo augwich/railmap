@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -25,7 +25,7 @@ class Response
     {
         ob_start(); // we use ob_start only because of Common::printDebug, we should actually not really use ob_start
 
-        if ($tracker->isDebugModeEnabled()) {
+        if ($tracker->isDebugModeEnabled() && TrackerConfig::getConfigValue('enable_sql_profiler')) {
             $this->timer = new Timer();
 
             TrackerDb::enableProfiling();

@@ -2,7 +2,7 @@
 /**
  * Piwik - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -119,7 +119,7 @@ class JoinGenerator
 
         $table = $this->tables->getLogTable($tableName);
 
-        if ($table->getColumnToJoinOnIdAction() || $table->getColumnToJoinOnIdAction() || $table->getLinkTableToBeAbleToJoinOnVisit()) {
+        if ($table->getColumnToJoinOnIdAction() || $table->getColumnToJoinOnIdVisit() || $table->getLinkTableToBeAbleToJoinOnVisit()) {
             $this->tables->addTableToJoin($tableName);
             return;
         }
