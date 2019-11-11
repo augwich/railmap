@@ -15,8 +15,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
 
 	<style>
 		#map {position:absolute; width:100%; margin-top:40px }
@@ -69,15 +69,15 @@
 						Legend
 					</div>
 					<div class="item">
-						<img class="ui avatar image" src="icons/legend_icons_standard_line.svg">
+						<img class="ui avatar image" src="images/legend_icons_standard_line.svg">
 						Standard Line
 					</div>
 					<div class="item">
-						<img class="ui avatar image" src="icons/legend_icons_limited_service.svg">
+						<img class="ui avatar image" src="images/legend_icons_limited_service.svg">
 						Limited Service
 					</div>
 					<div class="item">
-						<img class="ui avatar image" src="icons/legend_icons_under_construction.svg">
+						<img class="ui avatar image" src="images/legend_icons_under_construction.svg">
 						Planned Service
 					</div>
 
@@ -233,8 +233,19 @@
 		</div>
 	</div>
 
+
 	<!-- Map Element -->
 	<div>
+
+		<!-- Load geocoder for search function -->
+
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+		<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
+		<!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+		<!-- Map object -->
 		<div id="map"></div>
 		<script type="text/javascript">
 			//define access token
@@ -258,6 +269,14 @@
 			    },
 			    trackUserLocation: true
 			}), 'top-left');
+
+			//add search function
+			map.addControl(new MapboxGeocoder({
+				accessToken: mapboxgl.accessToken,
+				// limit results to Australia
+				countries: 'us',
+				mapboxgl: mapboxgl
+			}));
 
 			// When a click event occurs on a feature in the places layer, open a popup at the
 			// location of the feature, with description HTML from its properties.
