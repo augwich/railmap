@@ -278,11 +278,17 @@
 				mapboxgl: mapboxgl
 			}));
 
+			var Stations_PM = 'Stations Primary - Multi System';
+			var Stations_PC = 'Stations Primary - Connection';
+			var Stations_PT = 'Stations Primary - Terminus';
+			var Stations_S = 'Stations Secondary';
+			var Stations_P = 'Stations Planned';
+
 			// When a click event occurs on a feature in the places layer, open a popup at the
 			// location of the feature, with description HTML from its properties.
-			map.on('click', 'Stations Primary_MA - Multi System', function (e) {
+			map.on('click', Stations_PM, function (e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = e.features[0].properties.Name + "\n" + e.features[0].properties.City;
+				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
 				 
 				// Ensure that if the map is zoomed out such that multiple
 				// copies of the feature are visible, the popup appears
@@ -298,12 +304,120 @@
 			});
 			 
 			// Change the cursor to a pointer when the mouse is over the places layer.
-			map.on('mouseenter', 'Stations Primary_MA - Multi System', function () {
+			map.on('mouseenter', Stations_PM, function () {
 				map.getCanvas().style.cursor = 'pointer';
 			});
 			 
 			// Change it back to a pointer when it leaves.
-			map.on('mouseleave', 'Stations Primary_MA - Multi System', function () {
+			map.on('mouseleave', Stations_PM, function () {
+				map.getCanvas().style.cursor = '';
+			});
+
+			map.on('click', Stations_PC, function (e) {
+				var coordinates = e.features[0].geometry.coordinates.slice();
+				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
+				 
+				// Ensure that if the map is zoomed out such that multiple
+				// copies of the feature are visible, the popup appears
+				// over the copy being pointed to.
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+				 
+				new mapboxgl.Popup()
+					.setLngLat(coordinates)
+					.setHTML(description)
+					.addTo(map);
+			});
+			 
+			// Change the cursor to a pointer when the mouse is over the places layer.
+			map.on('mouseenter', Stations_PC, function () {
+				map.getCanvas().style.cursor = 'pointer';
+			});
+			 
+			// Change it back to a pointer when it leaves.
+			map.on('mouseleave', Stations_PC, function () {
+				map.getCanvas().style.cursor = '';
+			});
+
+			map.on('click', Stations_PT, function (e) {
+				var coordinates = e.features[0].geometry.coordinates.slice();
+				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
+				 
+				// Ensure that if the map is zoomed out such that multiple
+				// copies of the feature are visible, the popup appears
+				// over the copy being pointed to.
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+				 
+				new mapboxgl.Popup()
+					.setLngLat(coordinates)
+					.setHTML(description)
+					.addTo(map);
+			});
+			 
+			// Change the cursor to a pointer when the mouse is over the places layer.
+			map.on('mouseenter', Stations_PT, function () {
+				map.getCanvas().style.cursor = 'pointer';
+			});
+			 
+			// Change it back to a pointer when it leaves.
+			map.on('mouseleave', Stations_PT, function () {
+				map.getCanvas().style.cursor = '';
+			});
+
+			map.on('click', Stations_S, function (e) {
+				var coordinates = e.features[0].geometry.coordinates.slice();
+				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
+				 
+				// Ensure that if the map is zoomed out such that multiple
+				// copies of the feature are visible, the popup appears
+				// over the copy being pointed to.
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+				 
+				new mapboxgl.Popup()
+					.setLngLat(coordinates)
+					.setHTML(description)
+					.addTo(map);
+			});
+			 
+			// Change the cursor to a pointer when the mouse is over the places layer.
+			map.on('mouseenter', Stations_S, function () {
+				map.getCanvas().style.cursor = 'pointer';
+			});
+			 
+			// Change it back to a pointer when it leaves.
+			map.on('mouseleave', Stations_S, function () {
+				map.getCanvas().style.cursor = '';
+			});
+
+			map.on('click', Stations_P, function (e) {
+				var coordinates = e.features[0].geometry.coordinates.slice();
+				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
+				 
+				// Ensure that if the map is zoomed out such that multiple
+				// copies of the feature are visible, the popup appears
+				// over the copy being pointed to.
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+				 
+				new mapboxgl.Popup()
+					.setLngLat(coordinates)
+					.setHTML(description)
+					.addTo(map);
+			});
+			 
+			// Change the cursor to a pointer when the mouse is over the places layer.
+			map.on('mouseenter', Stations_P, function () {
+				map.getCanvas().style.cursor = 'pointer';
+			});
+			 
+			// Change it back to a pointer when it leaves.
+			map.on('mouseleave', Stations_P, function () {
 				map.getCanvas().style.cursor = '';
 			});
 

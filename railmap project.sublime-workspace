@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Stations_",
+				"Stations_P"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
 				"fu",
 				"function"
 			],
@@ -203,7 +211,7 @@
 			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 12277,
+				"buffer_size": 18653,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -301,6 +309,7 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Data/Stations/Builds/Stations_NE_build 2.4.csv",
 		"/F/Projects/Rail Map/Website/test.html",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 1.3.geojson",
 		"/F/Projects/Rail Map/Website/faq.html",
@@ -427,8 +436,7 @@
 		"/C/Users/Augwich/Desktop/Toolkit/Tor Browser/FirefoxPortable/Data/profile/extensions/firefox@ghostery.com/components/ghostery-content-policy.js",
 		"/C/Users/Augwich/Dropbox/ArchiTalks - topic ideas (Happerfooph-PC's conflicted copy 2016-06-16).txt",
 		"/C/Users/Augwich/Dropbox/_FALL 2016/Vertical/Project 2/models/downloaded/2001.TXT",
-		"/C/Users/Augwich/Desktop/Counter Deck",
-		"/F/Website/projects/ad4-bursting-heart/images.php"
+		"/C/Users/Augwich/Desktop/Counter Deck"
 	],
 	"find":
 	{
@@ -555,15 +563,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12277,
+						"buffer_size": 18653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9733,
-								9733
+								17104,
+								17104
 							]
 						],
 						"settings":
@@ -572,7 +580,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3328.0,
+						"translation.y": 5355.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -603,7 +611,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -688,7 +696,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
