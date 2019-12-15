@@ -60,7 +60,7 @@
 					<a class="item" id="map-usage">
 						How To Use
 					</a>
-					<a href="faq.html" class="item" target="_blank">
+					<a href="faq.html" class="item">
 						FAQ
 					</a>
 
@@ -91,13 +91,17 @@
 				Resources
 				<i class="dropdown icon"></i>
 				<div class="menu">
+					<a href="maps.html" class="item">
+						More Maps
+					</a>
+					<div class="divider"></div>
 					<a href="https://trello.com/b/GinKUKvq/usa-rail-project" class="item" target="_blank">
-						Roadmap
+						Roadmap <em>(Trello)</em>
 					</a>
 					<a href="https://github.com/augwich/railmap/tree/master/Data" class="item" target="_blank">
-						Dataset
+						Dataset <em>(GitHub)</em>
 					</a>
-					<a class="item" id="additional-links">
+					<a class="item" id="additional-links" href="links.html">
 						Additional Links
 					</a>
 
@@ -105,11 +109,8 @@
 					<div class="header">
 						Talk to Us!
 					</div>
-					<a href="https://trello.com/b/GinKUKvq/usa-rail-project" class="item">
-						Contact <em>(Trello)</em>
-					</a>
 					<a href="https://trello.com/c/H4OaVxgs" class="item">
-						Report an Issue <em>(Trello)</em>
+						Contact/Report an Issue
 					</a>
 				</div>
 			</div>
@@ -177,16 +178,16 @@
 	</div>
 
 	<!-- Modal activation script -->
-	<script>
+<!-- 	<script>
 		$(document).ready(function(){
 			$('#additional-links').click(function(){
 				$('#additional-links-modal').modal('show');
 			});
 		});
-	</script>
+	</script> -->
 
 	<!-- Modal element -->
-	<div id="additional-links-modal" class="ui modal">
+	<!-- <div id="additional-links-modal" class="ui modal">
 		<h1 class="header">
 			Additional Links
 		</h1>
@@ -231,7 +232,7 @@
 				Close
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 	<!-- Map Element -->
@@ -288,7 +289,7 @@
 			// location of the feature, with description HTML from its properties.
 			map.on('click', Stations_PM, function (e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
+				var description = '<strong>' + e.features[0].properties.Name_Link_HTML + '</strong> <br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong> Services: </strong>' + e.features[0].properties.Service + '<br/> <strong> City: </strong>' + e.features[0].properties.City + '<br/> <strong>Neighborhood: </strong>' + e.features[0].properties.Neighborhood + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible;				 
 				 
 				// Ensure that if the map is zoomed out such that multiple
 				// copies of the feature are visible, the popup appears
@@ -315,8 +316,8 @@
 
 			map.on('click', Stations_PC, function (e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
-				 
+				var description = '<strong>' +e.features[0].properties.Name_Link_HTML + '</strong> <br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong> Services: </strong>' + e.features[0].properties.Service + '<br/> <strong> City: </strong>' + e.features[0].properties.City + '<br/> <strong>Neighborhood: </strong>' + e.features[0].properties.Neighborhood + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible;				 
+
 				// Ensure that if the map is zoomed out such that multiple
 				// copies of the feature are visible, the popup appears
 				// over the copy being pointed to.
@@ -342,8 +343,8 @@
 
 			map.on('click', Stations_PT, function (e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
-				 
+				var description = '<strong>' +e.features[0].properties.Name_Link_HTML + '</strong> <br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong> Services: </strong>' + e.features[0].properties.Service + '<br/> <strong> City: </strong>' + e.features[0].properties.City + '<br/> <strong>Neighborhood: </strong>' + e.features[0].properties.Neighborhood + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible;				 
+
 				// Ensure that if the map is zoomed out such that multiple
 				// copies of the feature are visible, the popup appears
 				// over the copy being pointed to.
@@ -369,8 +370,8 @@
 
 			map.on('click', Stations_S, function (e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
-				 
+				var description = '<strong>' +e.features[0].properties.Name_Link_HTML + '</strong> <br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong> Services: </strong>' + e.features[0].properties.Service + '<br/> <strong> City: </strong>' + e.features[0].properties.City + '<br/> <strong>Neighborhood: </strong>' + e.features[0].properties.Neighborhood + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible;				 
+
 				// Ensure that if the map is zoomed out such that multiple
 				// copies of the feature are visible, the popup appears
 				// over the copy being pointed to.
@@ -396,8 +397,8 @@
 
 			map.on('click', Stations_P, function (e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = '<strong>' + e.features[0].properties.Name + '</strong> <br/> <strong>City: </strong>' + e.features[0].properties.City + '<br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible + '<br/>' + e.features[0].properties.Web_Link_HTML;
-				 
+				var description = '<strong>' +e.features[0].properties.Name_Link_HTML + '</strong> <br/> <strong>System: </strong>' + e.features[0].properties.System + '<br/> <strong>Lines: </strong>' + e.features[0].properties.Lines + '<br/> <strong> Services: </strong>' + e.features[0].properties.Service + '<br/> <strong> City: </strong>' + e.features[0].properties.City + '<br/> <strong>Neighborhood: </strong>' + e.features[0].properties.Neighborhood + '<br/> <strong>Status: </strong>' + e.features[0].properties.Status + '<br/> <strong>Year Opened: </strong>' + e.features[0].properties.Year_Opened + '<br/> <strong>Accessible: </strong>' + e.features[0].properties.Handicap_Accessible;				 
+
 				// Ensure that if the map is zoomed out such that multiple
 				// copies of the feature are visible, the popup appears
 				// over the copy being pointed to.
