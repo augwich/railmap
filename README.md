@@ -43,50 +43,51 @@ Station coordinates are retrieved from QGIS, and copied into Google Sheets. Thes
 
 ```
 **STATION VALUES**
-*updated for version 0.11*
+*updated for version 0.1.7*
 
-0. (a) geo_longitude [float]
+1. geo_longitude [float]
  - station longitude coordinate
 
-0. b) geo_latitude [float]
+2. geo_latitude [float]
  - station latitude coordinate
 
-0. c) Unique ID [int]
+3. Unique_ID [int]
  - unique station id number
 
-1. Name [string]
+4. Name [string]
  - name of station
 
-2. City [string]
+5. City [string]
  - city and state of station
 
-3. Neighborhood [string]
+6. Neighborhood [string]
  - neighborhood of station, if applicable
 
-4. Multi-System [bool]
+7. Multi_System [bool]
  - whether the station serves multiple systems. "False" for most stations
 
-5. System [string]
+8. System [string]
  - system(s) that serve this station
 
-6. System Code [string]
+9. System_Code [string]
  - System Codes of the systems that serve this station.
  - See the [System Codes](https://trello.com/c/PLDbhUPZ) card for more details
 
-7. Multi-Line [bool]
+10. Multi_Line [bool]
  - whether the station serves multiple lines/routes within any one system
  - note that Multi-Line is marked "True" if the station has a protected connection to another station.
 
-8. Line [string]
+11. Lines [string]
  - name of lines/routes serving this station
  - written as "LineName (System)"
  - *note that I've used the more colloquial definition of "Line" here - what might technically be called a "route" or "service" depending on the system - to ease clarity for the layperson. Line does **not** refer to a fixed length of track.*
 
-9. Service [string]
+12. Service [string]
  - if the line has multiple services/branches, this indicates which services/branch serves this station
  - written as "ServiceName (LineName)"
+ - If limited, may contain an optional descriptor indicating how the service is limited, appended to the end of the service tag (written as "ServiceName - Service (Designator)"). Descriptors may include, but are not limited to, the following: "Late Nights Only", "Weekends Only", "Rush Hours Only", "Special Events".
 
-10. Limited Service [bool/string]
+13. Limited_Service [bool/string]
  - whether the lines/routes serving this station operate at a "limited service" capacity at this station.
  - written as "ServiceName - bool"
  - written as simple "bool" if only one service serves this station
@@ -94,39 +95,38 @@ Station coordinates are retrieved from QGIS, and copied into Google Sheets. Thes
 a) the total number of trains that serve this station is less than 6 per day in a single direction
 b) the total number of days in which a train serves this station is less than 5 (to catch systems that run only on weekend or only on some weekdays).
 c) the total number of hours in which a train serves this station in a single day is less than 33% of the total hours that system operates per day (to catch lines that run late-nights or rush hours only)
- - may contain an optional descriptor indicating how the service is limited, appended to the end of the limited service tag (written as "ServiceName - bool (Designator)"). Descriptors may include, but are not limited to, the following: "Late Nights Only", "Weekends Only", "Rush Hours Only", "Special Events".
 
-11. Service Frequency [string]
+14. Service_Frequency [string]
  - how frequently the service serves this station
  - written as "ServiceName - ServiceFrequency"
  - written as simple "ServiceFrequency" if only one service/line/route serves this station.
  - possible ServiceFrequency values: None (<1), Minimal (<5), Light (<15), Moderate (<35), Heavy (<70), Constant (>70)
 
-12. Terminus [bool]
+15. Terminus [bool]
  - whether the station is a terminus for a service. This includes partial termini (i.e. only some trains end their trip at this station).
 
-13. Connections [string]
+16. Connections [string]
  - whether the station has a "protected connection" to another station
  - written as "StationName (SystemName)"
  - written as "None" if no connections are present
 
-14. Handicap Accessible [bool/string]
+17. Handicap_Accessible [bool/string]
  - whether the station is handicap accessible
  - possible values: True, False, Partial
 
-15. Status [string]
+18. Status [string]
  - the current status of this station
  - possible values: Built, Planned, Under Construction, Closed
 
-16. Year Opened [int]
+19. Year_Opened [int]
  - what year this station was first opened
  - this is a rough value, as the definition of "first opened" can be vague/interpreted differently. Currently, this value indicates the year this station in it's current form opened. This means complete rebuilds count, but simple retrofits or refurbishments do not.
 
-17. Web Link [string]
+20. Web_Link [string]
  - URL to Wikipedia page for this station.
 
-18. Web Link (HTML) [string]
- - a simple HTML version of 15.
+21. Name_Link_HTML [string]
+ - a combination of Name and Web_Link, wrapped in HTML. Currently used for station popups.
 ```
 
 ### Lines
@@ -135,7 +135,7 @@ All line data is developed through QGIS, and saved as .gpkg files. The builds ar
 
 ```
 **LINE VALUES**
-*updated for version 0.11*
+*updated for version 0.1.7*
 
 0. fid [int]
  - auto-generated unique ID number for each line feature.
@@ -157,6 +157,7 @@ All line data is developed through QGIS, and saved as .gpkg files. The builds ar
  - Written as "All Service" if all service uses the line or no service designations exist.
  - Written as "None (No Regular Service)" if the line does not see normal service (i.e. special events only)"
  - Left blank (NULL) if service designations are not applicable to this line.
+ - If limited, may contain an optional descriptor indicating how the service is limited, appended to the end of the service tag (written as "ServiceName - Service (Designator)"). Descriptors may include, but are not limited to, the following: "Late Nights Only", "Weekends Only", "Rush Hours Only", "Special Events".
 
 5. Limited Service [boolean]
  - indicates whether the line is classified as "Limited Service"
@@ -172,7 +173,7 @@ All line data is developed through QGIS, and saved as .gpkg files. The builds ar
 
 8. Line Type [string]
  - type of rail/system that occupies this line. 
- - Possible values: "Heavy Rail", "Light Rail", "Streetcar", "Commuter Rail", "Intercity Rail", "Heritage Rail", "Monorail", "  People Mover",
+ - Possible values: "Heavy Rail", "Light Rail", "Streetcar", "Commuter Rail", "Intercity Rail", "Heritage Rail", "Monorail", "People Mover",
 
 9. Electrification [string]
  - whether the section of line is electrified and supports electric trains
@@ -182,7 +183,24 @@ All line data is developed through QGIS, and saved as .gpkg files. The builds ar
  - The system code applied to this system. Used for easy filtering/categorization of lines.
  - See the [Dataset Category](https://trello.com/c/PLDbhUPZ) card for system codes.
 
-**NOTE:** Offset line features 20 units in QGIS
+```
+Line Data is exported from QGIS using the following settings:
+
+```
+- Line Projection in QGIS: WGS84/Pseudo-Mercator EPSG:3857
+- Offset line features 20 units in QGIS
+- Exporting GeoJSON from QGIS:
+ - Format: GeoJSON
+ - CRS: EPSG:4326 - WSG 84 (Should be default)
+ - Geometry Type: Automatic
+ - Coordinate_precision: 6
+ - Write_box: No
+ - Do not add saved file to map
+- Before uploading to Mapbox, delete the line below (should be line 4): 
+
+```
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },"
+```
 ```
 
 ### Connections
@@ -191,7 +209,7 @@ All connection datasets are developed in QGIS, and saved as .gpkg files. As with
 
 ```
 **CONNECTION VALUES**
-*updated for version 0.11*
+*updated for version 0.1.4*
 
 1. Data Type [string]
 	- (used to indicate stations that are directly connected, either to allow passing between lines within the fare zone, or multiple stations that are directly connected to allow inter-system transfers (usually by sharing a name or location))
@@ -275,6 +293,19 @@ This readme was updated for verion 0.11. Version 1 will be released when a subst
 ## Authors
 
 * **August R.** - *Main Developer*
+
+
+## Disclaimer
+
+Last updated: December 10, 2019
+
+The information contained on http://www.railmap.xyz/ website (the "Service") and in this dataset (the "Data") is for general information purposes only.
+
+RailMap.xyz and its developers assume no responsibility for errors or omissions in the contents on the Service or in the Data.
+
+In no event shall RailMap.xyz and its developers be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other arising out of or in connection with the use of the Service, the Data, or the contents of the Service or Data. RailMap.xyz reserves the right to make additions, deletions, or modification to the contents on the Service and in the Data at any time without prior notice. This Disclaimer for RailMap.xyz has been created with the help of Disclaimer Generator.
+
+RailMap.xyz does not warrant that the website is free of viruses or other harmful components.
 
 
 ## License

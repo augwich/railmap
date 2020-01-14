@@ -215,7 +215,7 @@
 			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 19260,
+				"buffer_size": 19816,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -224,7 +224,7 @@
 			"file": "Website/links.html",
 			"settings":
 			{
-				"buffer_size": 27792,
+				"buffer_size": 29386,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -332,6 +332,9 @@
 	],
 	"file_history":
 	[
+		"/C/Program Files (x86)/Steam/steamapps/common/Transport Fever 2/res/models/models/model/vehicle/train/usa/new_haven.mdl",
+		"/C/Users/Augwich/AppData/Local/Temp/7zOEB03.tmp/american_post_coach.mdl",
+		"/C/Users/Augwich/AppData/Local/Temp/7zOA955.tmp/american_post_coach.mdl",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Stations_NE_build 2.4.csv",
 		"/F/Projects/Rail Map/Website/test.html",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 1.3.geojson",
@@ -456,14 +459,11 @@
 		"/C/Users/Augwich/Dropbox/ArchiTalks - topic ideas.txt",
 		"/C/Program Files (x86)/Games/GOG Games/Star Wars Jedi Knight - Jedi Academy/GameData/base/autoexec.cfg",
 		"/C/Users/Augwich/Desktop/Notes/to arrange.txt",
-		"/C/Users/Augwich/Desktop/Toolkit/Tor Browser/FirefoxPortable/Data/profile/extensions/firefox@ghostery.com/components/ghostery-content-policy.js",
-		"/C/Users/Augwich/Dropbox/ArchiTalks - topic ideas (Happerfooph-PC's conflicted copy 2016-06-16).txt",
-		"/C/Users/Augwich/Dropbox/_FALL 2016/Vertical/Project 2/models/downloaded/2001.TXT",
-		"/C/Users/Augwich/Desktop/Counter Deck"
+		"/C/Users/Augwich/Desktop/Toolkit/Tor Browser/FirefoxPortable/Data/profile/extensions/firefox@ghostery.com/components/ghostery-content-policy.js"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -580,7 +580,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -589,15 +589,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19260,
+						"buffer_size": 19816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3206,
-								3206
+								17972,
+								17972
 							]
 						],
 						"settings":
@@ -606,10 +606,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1560.0,
+						"translation.y": 4824.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -618,15 +618,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27792,
+						"buffer_size": 29386,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23325,
-								23325
+								23455,
+								23455
 							]
 						],
 						"settings":
@@ -635,10 +635,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8391.0,
+						"translation.y": 7109.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -825,7 +825,7 @@
 	"project": "railmap project.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
