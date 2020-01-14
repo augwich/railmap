@@ -196,11 +196,11 @@ Line Data is exported from QGIS using the following settings:
  - Coordinate_precision: 6
  - Write_box: No
  - Do not add saved file to map
-- Before uploading to Mapbox, delete the line below (should be line 4): 
+```
+Before uploading to Mapbox, delete the line below (should be line 4): 
 
 ```
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },"
-```
 ```
 
 ### Connections
@@ -225,6 +225,8 @@ To ease the accessing/filtering of data, all systems are assigned a unique "Syst
 Below is a list of all currently-assigned system codes, as of v0.11. Please see [this Trello card](https://trello.com/c/PLDbhUPZ) for the most recent list.
 
 ```
+For data that is cataloged outside of Trello, the datasets are broken into categories that correspond to current (2018) Federal Census Bureau categories. These are as follows:
+
 - New England (Northeast): CT, MA, ME, NH, RI, VT (Station ID# 1001 - 1700)
  - NE01 - Amtrak
  - NE02 - MBTA Subway
@@ -233,34 +235,35 @@ Below is a list of all currently-assigned system codes, as of v0.11. Please see 
  - NE05 - CTrail (Shore Line East, Hartford Line)
  - *Metro-North Railroad*
 
-- Mid Atlantic (Northeast): PA, NJ, NY (Station ID# 1701 - 2xxx)
+- Mid Atlantic (Northeast): PA, NJ, NY (Station ID# 1701 - 3900)
  - MA01 - Amtrak
  - MA02 - NYC Subway
  - MA03 - Metro-North Railroad
- - MA04 - 
+ - MA04 - Long Island Railroad
  - MA05 - PATH
  - MA06 - Staten Island Railroad
  - MA07 - Hudson-Bergen Light Rail
  - MA08 - Newark Light Rail
  - MA09 - NJ Transit Rail
  - MA10 - River LINE
- - MA11 - 
- - MA12 - 
- - MA13 - 
- - MA14 - 
+ - MA11 - PATCO Speedline
+ - MA12 - SEPTA Rapid Transit
+ - MA13 - SEPTA Regional Rail
+ - MA14 - Pittsburgh Light Rail
  - MA15 - Buffalo Metro Rail
+ - MA16 - AirTrain
 
-- East North Central (Midwest): IL, IN, MI, OH, WI (Id 3000)
- - EN01 - Amtrak
-
-- West North Central (Midwest): IA, KS, MN, MO, ND, NE, SD (Id 4000)
- - WN01 - Amtrak
-
-- South Atlantic (South): DC, DE, FL, GA, MD, NC, SC, VA, WV (Id 5000)
+- South Atlantic (South): DC, DE, FL, GA, MD, NC, SC, VA, WV (ID# 3900 - 4xxx )
  - SA01 - Amtrak
 
-- East South Central (South): AL, KY, MS, TN (Id 6000)
+- East North Central (Midwest): IL, IN, MI, OH, WI (Id 4000)
+ - EN01 - Amtrak
+
+- East South Central (South): AL, KY, MS, TN (Id 5000)
  - ES01 - Amtrak
+
+- West North Central (Midwest): IA, KS, MN, MO, ND, NE, SD (Id 6000)
+ - WN01 - Amtrak
 
 - West South Central (South): AR, LA, OK, TX (Id 7000)
  - WS - Amtrak

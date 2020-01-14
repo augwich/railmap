@@ -215,7 +215,16 @@
 			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 19816,
+				"buffer_size": 19815,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 13412,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -226,50 +235,6 @@
 			{
 				"buffer_size": 29386,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Data/Stations/Builds/Connections_MA_build 0.5.geojson",
-			"settings":
-			{
-				"buffer_size": 12019,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Data/Lines/Builds/Lines_NE_build 1.2.geojson",
-			"settings":
-			{
-				"buffer_size": 393880,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Website/faq.html",
-			"settings":
-			{
-				"buffer_size": 11045,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/maps.html",
-			"settings":
-			{
-				"buffer_size": 1813,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Augwich/Desktop/Windows Key.txt",
-			"settings":
-			{
-				"buffer_size": 329,
 				"line_ending": "Windows"
 			}
 		}
@@ -332,13 +297,21 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/.gitignore",
+		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_NE_build 1.0.geojson",
+		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 0.6.geojson",
+		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 0.5.geojson",
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.2.geojson",
+		"/F/Projects/Rail Map/Website/faq.html",
+		"/F/Projects/Rail Map/Website/maps.html",
+		"/C/Users/Augwich/Desktop/Windows Key.txt",
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 1.4.geojson",
 		"/C/Program Files (x86)/Steam/steamapps/common/Transport Fever 2/res/models/models/model/vehicle/train/usa/new_haven.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOEB03.tmp/american_post_coach.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOA955.tmp/american_post_coach.mdl",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Stations_NE_build 2.4.csv",
 		"/F/Projects/Rail Map/Website/test.html",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 1.3.geojson",
-		"/F/Projects/Rail Map/Website/faq.html",
 		"/F/Projects/Rail Map/Website/php.ini",
 		"/C/Users/Augwich/Desktop/fix.txt",
 		"/C/Users/Augwich/Dropbox/Fonts/tarpon motel/SIL Open Font License.txt",
@@ -451,15 +424,7 @@
 		"/C/Users/Augwich/Downloads/MegaModPack_082_English/ModPack Changelog_English.txt",
 		"/C/Users/Augwich/Desktop/Notes/election results",
 		"/C/Users/Augwich/Downloads/Troy_EMPAC terrain/Troy_EMPAC README.txt",
-		"/C/Users/Augwich/Desktop/Election Results Timothy Snider",
-		"/C/Users/Augwich/Documents/American Truck Simulator/profiles/5369722041756777696368/profile.sii",
-		"/J/_Files/Secondary Drive/ISO/Programs/V-ray 1.50.225/readme.txt",
-		"/C/Users/Augwich/Downloads/MegaModPack_082_English/ModPack Featurelist_English.txt",
-		"/F/Website/projects/ids-2.php",
-		"/C/Users/Augwich/Dropbox/ArchiTalks - topic ideas.txt",
-		"/C/Program Files (x86)/Games/GOG Games/Star Wars Jedi Knight - Jedi Academy/GameData/base/autoexec.cfg",
-		"/C/Users/Augwich/Desktop/Notes/to arrange.txt",
-		"/C/Users/Augwich/Desktop/Toolkit/Tor Browser/FirefoxPortable/Data/profile/extensions/firefox@ghostery.com/components/ghostery-content-policy.js"
+		"/C/Users/Augwich/Desktop/Election Results Timothy Snider"
 	],
 	"find":
 	{
@@ -580,7 +545,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -589,15 +554,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19816,
+						"buffer_size": 19815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17972,
-								17972
+								10075,
+								10075
 							]
 						],
 						"settings":
@@ -606,14 +571,43 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4824.0,
+						"translation.y": 3186.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13048,
+								13048
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "Website/links.html",
 					"semi_transient": false,
 					"settings":
@@ -635,152 +629,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7109.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Data/Stations/Builds/Connections_MA_build 0.5.geojson",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12019,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Data/Lines/Builds/Lines_NE_build 1.2.geojson",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 393880,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								59,
-								59
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Website/faq.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10604,
-								10562
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2385.0,
+						"translation.y": 193.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Website/maps.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1813,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/Augwich/Desktop/Windows Key.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 329,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45,
-								45
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
