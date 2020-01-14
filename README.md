@@ -290,7 +290,7 @@ Currently, assistance is being sought for the following:
 
 ## Version
 
-This readme was updated for verion 0.11. Version 1 will be released when a substantial enough portion of the dataset and map has been completed.
+This readme was updated for verion 0.1.7. Version 1 will be released when a substantial enough portion of the dataset and map has been completed.
 
 
 ## Authors
