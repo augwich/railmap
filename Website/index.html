@@ -44,13 +44,26 @@
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
+	<!-- Dropdown activation script -->
+	<script>
+		$(document).ready(function(){
+			$('#about-menu-dropdown').dropdown({
+				on: 'hover'
+			});
+
+			$('#resources-menu-dropdown').dropdown({
+				on: 'hover'
+			});
+		});
+	</script>
+
 	<!-- Navbar -->
 	<div class="ui fixed inverted blue menu">
 		<div class="ui container">
 			<a href="railmap.xyz" class="active vertically fitted item">
 				<h4 class="header">RAILMAP.xyz</h4>
 			</a>
-			<div class="ui simple dropdown item">
+			<div id="about-menu-dropdown" class="ui dropdown item">
 				About
 				<i class="dropdown icon"></i>
 				<div class="menu">
@@ -87,7 +100,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="ui simple dropdown item">
+			<div id="resources-menu-dropdown" class="ui dropdown item">
 				Resources
 				<i class="dropdown icon"></i>
 				<div class="menu">
