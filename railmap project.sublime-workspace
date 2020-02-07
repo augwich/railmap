@@ -301,6 +301,8 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Data/Stations/QGIS Data/Stations_MA3.gpkg",
+		"/F/Projects/Rail Map/Data/Stations/QGIS Data/Stations_NE1.gpkg",
 		"/F/Projects/Rail Map/.gitignore",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_NE_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 0.6.geojson",
@@ -426,9 +428,7 @@
 		"/F/Website/js/modernizr.custom.86080.js",
 		"/C/Users/Augwich/Desktop/Notes/Games to Play.txt",
 		"/C/Users/Augwich/Downloads/MegaModPack_082_English/ModPack Changelog_English.txt",
-		"/C/Users/Augwich/Desktop/Notes/election results",
-		"/C/Users/Augwich/Downloads/Troy_EMPAC terrain/Troy_EMPAC README.txt",
-		"/C/Users/Augwich/Desktop/Election Results Timothy Snider"
+		"/C/Users/Augwich/Desktop/Notes/election results"
 	],
 	"find":
 	{
@@ -549,7 +549,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -565,8 +565,8 @@
 						"selection":
 						[
 							[
-								2187,
-								2187
+								3366,
+								3366
 							]
 						],
 						"settings":
@@ -575,10 +575,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 468.0,
+						"translation.y": 624.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -607,7 +607,7 @@
 						"translation.y": 3666.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -636,7 +636,7 @@
 						"translation.y": 193.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
