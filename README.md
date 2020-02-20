@@ -222,7 +222,7 @@ All connection datasets are developed in QGIS, and saved as .gpkg files. As with
 
 To ease the accessing/filtering of data, all systems are assigned a unique "System Code". This code is written as XX01, where XX is the two-letter code for the region it is present in (using the 9 regions as defined by the 2018 Federal Census Bureau), and 01 is a unique number for each system. For example, the NYC Subway is given the system code "MA02".
 
-Below is a list of all currently-assigned system codes, as of v0.11. Please see [this Trello card](https://trello.com/c/PLDbhUPZ) for the most recent list.
+Below is a list of all currently-assigned system codes, as of v0.1.8. Please see [this Trello card](https://trello.com/c/PLDbhUPZ) for the most recent list.
 
 ```
 For data that is cataloged outside of Trello, the datasets are broken into categories that correspond to current (2018) Federal Census Bureau categories. These are as follows:
@@ -290,7 +290,7 @@ Currently, assistance is being sought for the following:
 
 ## Version
 
-This readme was updated for verion 0.1.7. Version 1 will be released when a substantial enough portion of the dataset and map has been completed.
+This readme was updated for verion 0.1.8. Version 1 will be released when a substantial enough portion of the dataset and map has been completed.
 
 
 ## Authors
