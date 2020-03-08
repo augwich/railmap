@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"it",
+				"item"
+			],
+			[
 				"about-m",
 				"about-menu-dropdown"
 			],
@@ -219,7 +223,7 @@
 			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 20108,
+				"buffer_size": 20146,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -569,15 +573,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20108,
+						"buffer_size": 20146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3640,
-								3640
+								3405,
+								3405
 							]
 						],
 						"settings":
@@ -586,10 +590,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 949.0,
+						"translation.y": 823.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -618,7 +622,7 @@
 						"translation.y": 1059.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -647,7 +651,7 @@
 						"translation.y": 2028.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -673,7 +677,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 443.0,
+						"translation.y": 521.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
