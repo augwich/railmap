@@ -314,6 +314,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Augwich/Desktop/software.txt",
+		"/C/Users/Augwich/Desktop/software",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_NE_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.2.geojson",
@@ -439,9 +441,7 @@
 		"/F/Website/projects/ad4-bursting-heart/main.php",
 		"/F/Website/projects/ad3-fracture/main.php",
 		"/F/Website/no_content.php",
-		"/F/Website/projects/ad3-habitat-67/main.php",
-		"/F/Website/CSS3FullscreenSlideshow2/css/demo.css",
-		"/F/Website/CSS3FullscreenSlideshow/index.html"
+		"/F/Website/projects/ad3-habitat-67/main.php"
 	],
 	"find":
 	{
@@ -677,7 +677,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 521.0,
+						"translation.y": 209.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
