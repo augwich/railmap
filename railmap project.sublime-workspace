@@ -241,7 +241,7 @@
 			"file": "Website/faq.html",
 			"settings":
 			{
-				"buffer_size": 11055,
+				"buffer_size": 11113,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -250,7 +250,7 @@
 			"file": "Website/links.html",
 			"settings":
 			{
-				"buffer_size": 35138,
+				"buffer_size": 35517,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -267,6 +267,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
 			[
 				"Snippet: ",
 				"Snippet: html"
@@ -310,10 +314,13 @@
 	"expanded_folders":
 	[
 		"/F/Projects/Rail Map",
-		"/F/Projects/Rail Map/Website"
+		"/F/Projects/Rail Map/Website",
+		"/F/Projects/Rail Map/Website/analytics",
+		"/F/Projects/Rail Map/Website/analytics/js"
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Website/links.html",
 		"/C/Users/Augwich/Desktop/software.txt",
 		"/C/Users/Augwich/Desktop/software",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_NE_build 1.0.geojson",
@@ -440,12 +447,11 @@
 		"/F/Website/archive.php",
 		"/F/Website/projects/ad4-bursting-heart/main.php",
 		"/F/Website/projects/ad3-fracture/main.php",
-		"/F/Website/no_content.php",
-		"/F/Website/projects/ad3-habitat-67/main.php"
+		"/F/Website/no_content.php"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -590,10 +596,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 823.0,
+						"translation.y": 391.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -619,10 +625,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1059.0,
+						"translation.y": 843.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -631,15 +637,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11055,
+						"buffer_size": 11113,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9493,
-								9493
+								9694,
+								9694
 							]
 						],
 						"settings":
@@ -648,10 +654,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2028.0,
+						"translation.y": 3009.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -660,15 +666,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 35138,
+						"buffer_size": 35517,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27041,
-								27041
+								30888,
+								30888
 							]
 						],
 						"settings":
@@ -677,7 +683,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 209.0,
+						"translation.y": 15809.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -688,7 +694,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -725,7 +731,7 @@
 	"project": "railmap project.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -763,7 +769,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 171.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
