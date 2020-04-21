@@ -43,7 +43,7 @@ Station coordinates are retrieved from QGIS, and copied into Google Sheets. Thes
 
 ```
 **STATION VALUES**
-*updated for version 0.1.7*
+*last updated 04.04.20*
 
 1. geo_longitude [float]
  - station longitude coordinate
@@ -85,11 +85,12 @@ Station coordinates are retrieved from QGIS, and copied into Google Sheets. Thes
 12. Service [string]
  - if the line has multiple services/branches, this indicates which services/branch serves this station
  - written as "ServiceName (LineName)"
+ - can be written as simply "ServiceName" if only one Line is present
  - If limited, may contain an optional descriptor indicating how the service is limited, appended to the end of the service tag (written as "ServiceName - Service (Designator)"). Descriptors may include, but are not limited to, the following: "Late Nights Only", "Weekends Only", "Rush Hours Only", "Special Events".
 
 13. Limited_Service [bool/string]
  - whether the lines/routes serving this station operate at a "limited service" capacity at this station.
- - written as "ServiceName - bool"
+ - written as "LineName - bool"
  - written as simple "bool" if only one service serves this station
  - a service is categorized as "Limited Service" if it meets one of the following:
 a) the total number of trains that serve this station is less than 6 per day in a single direction
@@ -98,7 +99,7 @@ c) the total number of hours in which a train serves this station in a single da
 
 14. Service_Frequency [string]
  - how frequently the service serves this station
- - written as "ServiceName - ServiceFrequency"
+ - written as "LineName - ServiceFrequency"
  - written as simple "ServiceFrequency" if only one service/line/route serves this station.
  - possible ServiceFrequency values: None (<1), Minimal (<5), Light (<15), Moderate (<35), Heavy (<70), Constant (>70)
 
@@ -184,8 +185,7 @@ All line data is developed through QGIS, and saved as .gpkg files. The builds ar
  - See the [Dataset Category](https://trello.com/c/PLDbhUPZ) card for system codes.
 
 ```
-Line Data is exported from QGIS using the following settings:
-
+Line data is exported from QGIS using the following settings:
 ```
 - Line Projection in QGIS: WGS84/Pseudo-Mercator EPSG:3857
 - Offset line features 20 units in QGIS
@@ -196,9 +196,7 @@ Line Data is exported from QGIS using the following settings:
  - Coordinate_precision: 6
  - Write_box: No
  - Do not add saved file to map
-```
-Before uploading to Mapbox, delete the line below (should be line 4): 
-
+- Before uploading to Mapbox, delete the line below (should be line 4): 
 ```
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },"
 ```
@@ -235,11 +233,11 @@ For data that is cataloged outside of Trello, the datasets are broken into categ
  - NE05 - CTrail (Shore Line East, Hartford Line)
  - *Metro-North Railroad*
 
-- Mid Atlantic (Northeast): PA, NJ, NY (Station ID# 1701 - 3900)
+- Mid Atlantic (Northeast): PA, NJ, NY (Station ID# 1701 - 3800)
  - MA01 - Amtrak
  - MA02 - NYC Subway
  - MA03 - Metro-North Railroad
- - MA04 - Long Island Railroad
+ - MA04 - Long Island Rail Road
  - MA05 - PATH
  - MA06 - Staten Island Railroad
  - MA07 - Hudson-Bergen Light Rail
@@ -253,8 +251,23 @@ For data that is cataloged outside of Trello, the datasets are broken into categ
  - MA15 - Buffalo Metro Rail
  - MA16 - AirTrain
 
-- South Atlantic (South): DC, DE, FL, GA, MD, NC, SC, VA, WV (ID# 3900 - 4xxx )
+- South Atlantic (South): DC, DE, FL, GA, MD, NC, SC, VA, WV (ID# 3801 - 4xxx )
  - SA01 - Amtrak
+ - SA02 - Metro SubwayLink
+ - SA03 - Light RailLink
+ - SA04 - Washington Metro
+ - SA05 - Purple Line
+ - SA06 - DC Streetcar
+ - SA07 - MARC Train
+ - SA08 - VRE
+ - SA09 - AreoTrain
+ - SA10
+ - SA11
+ - SA12
+ - SA13
+ - SA14
+ - SA15
+ - *SEPTA Regional Rail*
 
 - East North Central (Midwest): IL, IN, MI, OH, WI (Id 4000)
  - EN01 - Amtrak
