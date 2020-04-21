@@ -199,7 +199,6 @@ Line data is exported from QGIS using the following settings:
 - Before uploading to Mapbox, delete the line below (should be line 4): 
 ```
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },"
-```
 
 ### Connections
 
