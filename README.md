@@ -220,7 +220,7 @@ All connection datasets are developed in QGIS, and saved as .gpkg files. As with
 
 To ease the accessing/filtering of data, all systems are assigned a unique "System Code". This code is written as XX01, where XX is the two-letter code for the region it is present in (using the 9 regions as defined by the 2018 Federal Census Bureau), and 01 is a unique number for each system. For example, the NYC Subway is given the system code "MA02".
 
-Below is a list of all currently-assigned system codes, as of v0.1.8. Please see [this Trello card](https://trello.com/c/PLDbhUPZ) for the most recent list.
+Below is a list of all currently-assigned system codes, as of v0.2.1 Please see [this Trello card](https://trello.com/c/PLDbhUPZ) for the most recent list.
 
 ```
 For data that is cataloged outside of Trello, the datasets are broken into categories that correspond to current (2018) Federal Census Bureau categories. These are as follows:
@@ -261,8 +261,8 @@ For data that is cataloged outside of Trello, the datasets are broken into categ
  - SA07 - MARC Train
  - SA08 - VRE
  - SA09 - AreoTrain
- - SA10
- - SA11
+ - SA10 - The Tide Light Rail
+ - SA11 - WVU Personal Rapid Transit
  - SA12
  - SA13
  - SA14
