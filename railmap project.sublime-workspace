@@ -220,39 +220,30 @@
 	"buffers":
 	[
 		{
-			"contents": "Boston\nNYC\nPA/Scranton\nWhite Plains...? (Hudson River?)\nLong Island?\nNew Jersey...?\nLA\nPhilladelphia\n\n\nBoston\nNYC\nPhilladelphia\nPA/Scranton\nLA\nSacramento\nMiami\nAlbany/Upstate NY\nWestern MA/Berkshires\nPortland ME\nDenver/Boulder\nWashington DC\nAtlanta GA\nBuffalo NY",
+			"file": "Website/humans.txt",
 			"settings":
 			{
-				"buffer_size": 262,
-				"line_ending": "Windows",
-				"name": "Boston"
-			}
-		},
-		{
-			"file": "/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_fluted.mdl",
-			"settings":
-			{
-				"buffer_size": 28284,
+				"buffer_size": 473,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Red Dead Redemption 2\nHorizon Zero Dawn\nThe Outer Worlds\nWatch Dogs 2\n",
+			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 70,
-				"line_ending": "Windows",
-				"name": "Red Dead Redemption 2"
+				"buffer_size": 20066,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "NO2\nH3PO4\nXe\nMnO2\n",
+			"file": "Website/links.html",
 			"settings":
 			{
-				"buffer_size": 18,
-				"line_ending": "Windows",
-				"name": "NO2"
+				"buffer_size": 45532,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -318,6 +309,19 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Augwich/Desktop/locaitons",
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.3.geojson",
+		"/C/Program Files (x86)/Steam/userdata/45109132/1066780/local/crash_dump/stdout.txt",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/1977034859/mod.lua",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/1977034859/settings.lua",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/1977034859/workshop_fileid.txt",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2018758199/res/scripts/eatglobal_v2_26.lua",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2019668165/Disclaimer.txt",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2035694754/res/models/model/vehicle/waggon/p85_lv_coach.mdl",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/p85_co_coach_fluted.mdl",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/p85_co_coach.mdl",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/menu_p85_co_coach.mdl",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_fluted.mdl",
 		"/F/Projects/Rail Map/README.md",
 		"/F/Projects/Rail Map/Website/index.html",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.2.geojson",
@@ -326,15 +330,11 @@
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_congressional.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/menu_p85_prr_coach.mdl",
-		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/p85_co_coach.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_modern.mdl",
-		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/menu_p85_co_coach.mdl",
-		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/p85_co_coach_fluted.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA063013/pullman_1900.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA069F43/streamlined_santa_fe.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA07BA40/pullman_1900.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA076AA1/pullman_1850.mdl",
-		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_fluted.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/mod.lua",
 		"/F/Projects/Rail Map/Website/faq.html",
 		"/F/Projects/Rail Map/Website/links.html",
@@ -436,20 +436,11 @@
 		"/F/Website/about.php",
 		"/F/Website/other_work.php",
 		"/C/Users/Augwich/Desktop/Notes/lemon jello.txt",
-		"/C/Users/Augwich/Documents/Finances/finance categories",
-		"/F/Website/footer.php",
-		"/F/Website/other-work/drawing.php",
-		"/F/Portfolio/Resume+worksample/arrowstreet_coverletter",
-		"/F/Portfolio/Resume+worksample/arrowstreet_coverletter.txt",
-		"/C/Users/Augwich/Dropbox/Firms",
-		"/F/Website/about/digital_resume.php",
-		"/F/Website/about/digital_portfolio.php",
-		"/F/Website/digital_resume.php",
-		"/F/Website/digital_portfolio.php"
+		"/C/Users/Augwich/Documents/Finances/finance categories"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -463,6 +454,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"amtrak",
 			"avatar",
 			" labeled icon",
 			"divided",
@@ -568,28 +560,28 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "Website/humans.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 262,
+						"buffer_size": 473,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								262,
-								262
+								222,
+								222
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Boston",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -601,28 +593,28 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_fluted.mdl",
+					"file": "Website/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28284,
+						"buffer_size": 20066,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27999,
-								27999
+								3361,
+								3361
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 15714.0,
+						"translation.y": 1591.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -630,55 +622,28 @@
 				},
 				{
 					"buffer": 2,
+					"file": "Website/links.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 70,
+						"buffer_size": 45532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								54,
-								54
+								33386,
+								33386
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Red Dead Redemption 2",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18,
-								18
-							]
-						],
-						"settings":
-						{
-							"auto_name": "NO2",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 16501.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
