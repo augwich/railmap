@@ -245,6 +245,15 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"contents": "baseline comparison, single-plane glass all along the side. How does that compare to glare/daylight.\nCould natural ventilation be part of this (roof monitors)?\nHow do our studies relate to mech systems\nBig Ass fans?\n\nResearch triple glazed size restrictions\nPlay with window style - maybe more punched.\nMake sure plans work\n\nPull everything together for meeting with RFS",
+			"settings":
+			{
+				"buffer_size": 370,
+				"line_ending": "Windows",
+				"name": "baseline comparison, single-plane glass all along"
+			}
 		}
 	],
 	"build_system": "",
@@ -440,7 +449,7 @@
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -560,7 +569,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -588,7 +597,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -617,7 +626,7 @@
 						"translation.y": 1591.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -644,6 +653,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 16501.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								370
+							]
+						],
+						"settings":
+						{
+							"auto_name": "baseline comparison, single-plane glass all along",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
