@@ -247,12 +247,12 @@
 			}
 		},
 		{
-			"contents": "baseline comparison, single-plane glass all along the side. How does that compare to glare/daylight.\nCould natural ventilation be part of this (roof monitors)?\nHow do our studies relate to mech systems\nBig Ass fans?\n\nResearch triple glazed size restrictions\nPlay with window style - maybe more punched.\nMake sure plans work\n\nPull everything together for meeting with RFS",
+			"contents": "Acoustics\n\nAC (Acentech) reviewed general coordination in terms of acoustic items\nMD (RFS) introduced overall mechanical approach - cooling, air, chilled water distribution, etc.\n3-year period for full phase two implementation\nChiller will not be re-used for Strauss by completion of phase 2.\nAC requested sound data for applicable rooms (partial phase 1, full phase 2) with FCUs and Chiller\nAlternate as geothermal, would entail water-to-water chiller or similar, more complicated for sound with compressors indoors.\nAC indicated vibration is biggest concern for compressors. MD noted ground floor is ideal location, but due to space constraints this may not be feasilbe.\nAcentech to update recommendations per specific systems as outlined by MD.\nAC reviewed finishes per report as provided.\nARC said Milton has not shared concerns with noise issues in the existing building, but new head of school office and reception will need high acoustic privacy - Milton did indicate a potential need to replace doors and windows in addition to other surfaces.\nAC requested ARC to ask Milton about any other noise issues or complaints in the existing building.\nARC noted spaces should be designed for full phase 2 use, even in phase 1 (to prevent needing to re-work previously renovated spaces in phase 2 construction)\nNot much space to run ductwork horizontal - will nee to be predominantly up and down. Could be straight shot from attic - however ARC indicated this will be an issue adding chases to the reading room.Per AC, would be good to plan for those chase locations now to make things easier in phase 2.\n\nOther Mechanical\n\nFloor to floor ground level is reasonable to work with - first to second is less but spaces are generally stacked in plan where vertical chases are more feasible.\nMD indicated ground floor air requirements are fairly minimal.\nCombustable construction in building may require sprinklers above and below ceiling if adding large duct (12\") - but this would only be in ground floor corridor. Thus side-wall duct in rooms, with lower corridor ceiling for duct.\nExhaust/return air may be ducted, but fairly minimal so ducting may not be needed.\nAC indicated well-sealed doors would be needed for acoustics, which may be issue with pressurized rooms for air return. Full sealing of acoustically sound rooms (sim. to healthcare and office environment) for office, reception, and potentially conference rooms will be part of working acoustic goal - so mechanical should be designed with this in mind - MD responded this approach would mean supply and return to each room (rather than pressurized with no return).\nMD - 50 CFM in most rooms, no return (pressurized). Return air from reception (200 CFM).\nMD reviewed fan coil locations on ground floor.\nRFS reviewed existing mechanical uses of mech room on ground floor. Question of whether mech rooms need to grow as part of phase 1. Not required for mechanical, but may be needed for other systems.\nLocating chiller outside of college counciling or head of school offices may be an issue with sound, but may be ok for phase 1 only.\nPlan potential location outside of stair, no windows in this area would help with visual and sound transmission.\nDiscussions about what work needs to be dealt with in phase 1 to prep for phase 2\nRFS to indicate in narrative what work is to be part of phase 1 vs phase 2.\nIn base (not alternate) option - tapping into existing campus loop. Pumps on ground level, Doaz unit in attic storage/mezz. Then just FCUs perimeter, concealed. Maybe some supplemental cooling, could be hung in attic, not a major item. \nAlternate would require more mech space, and if this is in the attic it will also require some additional acoustical treatment. 30-ton chiller would be needed as part of this option. Preference on ground level but this may be hard. ",
 			"settings":
 			{
-				"buffer_size": 370,
+				"buffer_size": 3835,
 				"line_ending": "Windows",
-				"name": "baseline comparison, single-plane glass all along"
+				"name": "Acoustics"
 			}
 		}
 	],
@@ -318,6 +318,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Augwich/Downloads/owssvr.ics",
 		"/C/Users/Augwich/Desktop/locaitons",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.3.geojson",
 		"/C/Program Files (x86)/Steam/userdata/45109132/1066780/local/crash_dump/stdout.txt",
@@ -444,8 +445,7 @@
 		"/C/Users/Augwich/Documents/Unity/Card Game - Sloan Tutorial/Assets/Scripts/CardModel.cs",
 		"/F/Website/about.php",
 		"/F/Website/other_work.php",
-		"/C/Users/Augwich/Desktop/Notes/lemon jello.txt",
-		"/C/Users/Augwich/Documents/Finances/finance categories"
+		"/C/Users/Augwich/Desktop/Notes/lemon jello.txt"
 	],
 	"find":
 	{
@@ -652,7 +652,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 16501.0,
+						"translation.y": 823.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -663,7 +663,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 370,
+						"buffer_size": 3835,
 						"regions":
 						{
 						},
@@ -671,12 +671,12 @@
 						[
 							[
 								0,
-								370
+								3835
 							]
 						],
 						"settings":
 						{
-							"auto_name": "baseline comparison, single-plane glass all along",
+							"auto_name": "Acoustics",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
