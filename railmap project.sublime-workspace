@@ -220,39 +220,57 @@
 	"buffers":
 	[
 		{
-			"file": "Website/humans.txt",
+			"contents": "Dear Friends and Family,\nThe last year has without question been a difficult one. COVID-19 has upended our way of life and forced us to reinvent our routines, our livelihoods, and our connections with those we care about. Vivian and I hope that you all have managed to stay safe and healthy through this time, finding ways to maintain your relationships with others, and taking care of yourselves too. For those who may have experienced the effects of the coronavirus first-hand, we offer whatever love and care we can give for you and your loved ones.\nGiven all of this, Vivian and I feel that the most responsible course of action regarding our planned wedding celebration is to postpone once more. In recent months, we have begun to see positive change in light of the pandemic. Hospitalization rates are falling, and vaccination rates are going up. To quote the author John Green, \"the light-soaked days are coming.\" But it is a slow process, and based on current vaccination rates, Vivian and I do not feel it is wise to hold a wedding with all of you this coming May.\nDetails are still being finalized, however right now we are looking at postponing the wedding about a year, to May 14, 2022. I know this is a long way off, and disappointing. We had so hoped to see and celebrate with you all soon! But this celebration is just as much for all of you as it is for us, and the last thing we want is to create a situation where our guests do not feel comfortable attending. We will continue to send out additional information in the coming months as we finalize plans and re-sign contracts. \nVivian and I also wanted to share an update from the two of us. Given the length of the pandemic and the (now almost 2 year) postponements, there was concern amongst us and our parents that my father Alan would not be able to attend any future celebrations, due to his illness. He is doing as well as one can, but the future is unknown and hard to plan for. As such, we felt that we could not wait to hold some form of celebration for him, and for us. Vivian and I ended up getting officially married this past fall, on our original September date. Because of the pandemic we kept it small and simple, with only our parents and siblings in attendance. The small celebration was held at 375 West Mountain Road in Bernardston, with a family friend who lives next door conducting the ceremony. It was a lovely day to be sure, but it pained us that we could not celebrate with all of you. This is why we fully intend to host our original wedding with everyone as planned. Some elements may change (given the rings are on fingers), but it is important to us that we are able to join together with our friends and family, and we hope to host the celebration in a way that still honors that time.\nExpect to see additional emails or mailings from us as we finalize more information on this new date in the coming months. We will also update our website https://www.theknot.com/us/vivian-mok-and-august-rulewich-may-2021 with new information as we have it. Please also feel free to reach out to either of us if you have any questions or concerns.\nWishing you all the best,\n\nAugust and Vivian",
 			"settings":
 			{
-				"buffer_size": 473,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/index.html",
-			"settings":
-			{
-				"buffer_size": 20066,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/links.html",
-			"settings":
-			{
-				"buffer_size": 45532,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Acoustics\n\nAC (Acentech) reviewed general coordination in terms of acoustic items\nMD (RFS) introduced overall mechanical approach - cooling, air, chilled water distribution, etc.\n3-year period for full phase two implementation\nChiller will not be re-used for Strauss by completion of phase 2.\nAC requested sound data for applicable rooms (partial phase 1, full phase 2) with FCUs and Chiller\nAlternate as geothermal, would entail water-to-water chiller or similar, more complicated for sound with compressors indoors.\nAC indicated vibration is biggest concern for compressors. MD noted ground floor is ideal location, but due to space constraints this may not be feasilbe.\nAcentech to update recommendations per specific systems as outlined by MD.\nAC reviewed finishes per report as provided.\nARC said Milton has not shared concerns with noise issues in the existing building, but new head of school office and reception will need high acoustic privacy - Milton did indicate a potential need to replace doors and windows in addition to other surfaces.\nAC requested ARC to ask Milton about any other noise issues or complaints in the existing building.\nARC noted spaces should be designed for full phase 2 use, even in phase 1 (to prevent needing to re-work previously renovated spaces in phase 2 construction)\nNot much space to run ductwork horizontal - will nee to be predominantly up and down. Could be straight shot from attic - however ARC indicated this will be an issue adding chases to the reading room.Per AC, would be good to plan for those chase locations now to make things easier in phase 2.\n\nOther Mechanical\n\nFloor to floor ground level is reasonable to work with - first to second is less but spaces are generally stacked in plan where vertical chases are more feasible.\nMD indicated ground floor air requirements are fairly minimal.\nCombustable construction in building may require sprinklers above and below ceiling if adding large duct (12\") - but this would only be in ground floor corridor. Thus side-wall duct in rooms, with lower corridor ceiling for duct.\nExhaust/return air may be ducted, but fairly minimal so ducting may not be needed.\nAC indicated well-sealed doors would be needed for acoustics, which may be issue with pressurized rooms for air return. Full sealing of acoustically sound rooms (sim. to healthcare and office environment) for office, reception, and potentially conference rooms will be part of working acoustic goal - so mechanical should be designed with this in mind - MD responded this approach would mean supply and return to each room (rather than pressurized with no return).\nMD - 50 CFM in most rooms, no return (pressurized). Return air from reception (200 CFM).\nMD reviewed fan coil locations on ground floor.\nRFS reviewed existing mechanical uses of mech room on ground floor. Question of whether mech rooms need to grow as part of phase 1. Not required for mechanical, but may be needed for other systems.\nLocating chiller outside of college counciling or head of school offices may be an issue with sound, but may be ok for phase 1 only.\nPlan potential location outside of stair, no windows in this area would help with visual and sound transmission.\nDiscussions about what work needs to be dealt with in phase 1 to prep for phase 2\nRFS to indicate in narrative what work is to be part of phase 1 vs phase 2.\nIn base (not alternate) option - tapping into existing campus loop. Pumps on ground level, Doaz unit in attic storage/mezz. Then just FCUs perimeter, concealed. Maybe some supplemental cooling, could be hung in attic, not a major item. \nAlternate would require more mech space, and if this is in the attic it will also require some additional acoustical treatment. 30-ton chiller would be needed as part of this option. Preference on ground level but this may be hard. ",
-			"settings":
-			{
-				"buffer_size": 3835,
+				"buffer_size": 3178,
 				"line_ending": "Windows",
-				"name": "Acoustics"
+				"name": "Dear Friends and Family,"
+			}
+		},
+		{
+			"contents": "Lost Ruins of Arnak\nBeyond the Sun\nSeasons\nStone Age\nCity of the Big Shoulders\nSantorini\nThrough the Ages: A new Story of Civilization\nThe Voyages of Marco Polo\nWelcome To New Las Vegas\nLa Granja\n",
+			"settings":
+			{
+				"buffer_size": 196,
+				"line_ending": "Windows",
+				"name": "Lost Ruins of Arnak"
+			}
+		},
+		{
+			"contents": "The project for the proposed renovations to the Robert Saltonstall Gymnasium (RSG) Renovation at Milton Academy includes scope for a minor renovation to the existing building, to provide new classroom space and upgraded office space on the lower level, and some accessibility upgrades on the main level. The scope for these renovations is shown on the attached floor plans, dated 2020-12-30, and detailed below:\n\n \n\n·        On the lower level, the existing south-east office block will be renovated into a new classroom L34. Both this and the existing classroom L32, as well as the accompanying corridor L31, will receive new mechanical systems and ceiling/finish upgrades. In addition, a new corridor L35 will be built through the existing locker room L39, allowing a third new classroom and two new offices to be constructed, as well as a new entry to the locker room. This includes a new MAAB / ADA-compliant ramp to navigate the existing floor change between corridor L31 and the north-eastern portion of the building. Finally, two new single-occupant toilet/shower rooms will be created in the western portion of the building, by converting two existing storage spaces. All new construction scope will be made accessible, to support any future renovations to the building.\n\n \n\n·        On the main (first) floor, the existing single-use toilet room will be reconfigured to support accessible use, and new drinking fountains will be provided (to replace the existing non-compliant fixtures). Any additional work on this floor will be to serve new mechanical equipment/ductwork being installed for the lower level only. This includes new ductwork and piping extending from a new DOAS unit on the roof of the existing smaller gym, for mechanical needs on the lower level.\n\nMilton Academy has requested improvements to the lower level of the existing RSG Building, to renovate some existing rooms into new classrooms and updated offices. The proposed renovation inclueds reconfiguring approximately 3,900 SF on the Lower Level of the building to create new classrooms and offices, a new entry into the existing locker room, and a new circulation corridor. In addition, two single-occupant toilet/shower rooms will be provided on the lower level, separate from the main scope of work. New mechanical systems, upgraded lighting, new plumbing, and new fire alarm systems will be provided within the scope of work boundary only. The project goal is to improve the use of the building in these areas while keeping accessibility in mind. To that end, the project includes a ramp and other accessible upgrades to the renovated area such that all new areas are accessible. On the main level, some accessibiliy upgrades will also be provided to an existing restroom, but this floor will otherwise remain untouched. No exterior work or sitework is included in the project scope.",
+			"settings":
+			{
+				"buffer_size": 2870,
+				"line_ending": "Windows",
+				"name": "The project for the proposed renovations to the Ro"
+			}
+		},
+		{
+			"file": "Data/Stations/Builds/Connections_SA_build 1.0.geojson",
+			"settings":
+			{
+				"buffer_size": 3424,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Data/Lines/Builds/Lines_SA_build 1.0.geojson",
+			"settings":
+			{
+				"buffer_size": 681711,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Data/Lines/Builds/Lines_MA_build 2.2.geojson",
+			"settings":
+			{
+				"buffer_size": 785818,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -318,6 +336,26 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_SA_build 0.3.geojson",
+		"/C/Users/Augwich/Documents/My Games/stellarisdashboard-windows-latest/README.md",
+		"/C/Users/Augwich/Desktop/Habitat 67/text.txt",
+		"/C/Users/Augwich/Downloads/archive/dunkinDonuts.json",
+		"/C/Users/Augwich/Downloads/wsj210301.puz",
+		"/F/Projects/Rail Map/Data/Stations/Builds/Stations_Combined_build 0.1.csv",
+		"/F/Projects/Rail Map/Data/Stations/Builds/Stations_SA_build 0.4.csv",
+		"/F/Projects/Rail Map/Data/Stations/Builds/Stations_MA_build 1.1.csv",
+		"/C/Users/Augwich/AppData/Local/Temp/7zO0CCF6E95/Music Attribution.txt",
+		"/C/Users/Augwich/AppData/LocalLow/Red Dot Games - backup/Car Mechanic Simulator 2018/profile0/#CarLoader1.dat",
+		"/C/Steam/steamapps/common/Car Mechanic Simulator 2018/cms2018_Data/level10",
+		"/C/Users/Augwich/Downloads/Car Names/Readme.txt",
+		"/C/Users/Augwich/Downloads/wsj201014.puz",
+		"/C/Users/Augwich/Downloads/31179/Ceiling-Panel-Armstrong_Ceilings-SOUNDSCAPES_Blades-Concave.txt",
+		"/F/Projects/Rail Map/qgis2web_2020_10_02-11_21_17_626555/index.html",
+		"/C/Users/Augwich/Desktop/fix.bat",
+		"/F/Projects/Rail Map/Website/links.html",
+		"/F/Projects/Rail Map/Website/index.html",
+		"/F/Projects/Rail Map/Website/humans.txt",
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.4.geojson",
 		"/C/Users/Augwich/Downloads/owssvr.ics",
 		"/C/Users/Augwich/Desktop/locaitons",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.3.geojson",
@@ -333,7 +371,6 @@
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/res/models/model/vehicle/waggon/menu_p85_co_coach.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192341/res/models/model/vehicle/waggon/p85_prr_coach_fluted.mdl",
 		"/F/Projects/Rail Map/README.md",
-		"/F/Projects/Rail Map/Website/index.html",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.2.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_SA_build 0.2.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_SA_build 0.1.geojson",
@@ -347,7 +384,6 @@
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA076AA1/pullman_1850.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/mod.lua",
 		"/F/Projects/Rail Map/Website/faq.html",
-		"/F/Projects/Rail Map/Website/links.html",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/workshop_fileid.txt",
 		"/C/Steam/userdata/45109132/1066780/local/settings.lua",
 		"/C/Program Files (x86)/Steam/userdata/45109132/1066780/local/settings.lua",
@@ -359,7 +395,6 @@
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_NE_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.2.geojson",
-		"/C/Users/Augwich/Desktop/Habitat 67/text.txt",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.3.geojson",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 1.4.geojson",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 2.0.geojson",
@@ -392,7 +427,6 @@
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.1.geojson",
 		"/F/Videos/Tutorials/OSM in Rhino/Part 2 - Elk and Rhino.txt",
 		"/F/Videos/Tutorials/OSM in Rhino/Part 1 - JOSM.txt",
-		"/F/Projects/Rail Map/Website/humans.txt",
 		"/F/Projects/Rail Map/Website/robots.txt",
 		"/F/Videos/Movies/Star Wars/HARMY-DEED-IV-V2.7-MKV-MANUAL/Star Wars Despecialized 2.7 MKV/SW 2.7 Readme.txt",
 		"/C/Users/Augwich/Desktop/semantic-sandbox/index.html",
@@ -429,23 +463,7 @@
 		"/F/Website/projects.php",
 		"/F/Website/header.php",
 		"/C/Users/Augwich/Dropbox/Firms.txt",
-		"/C/Users/Augwich/Downloads/jpegoptim-1.4.1.tar/jpegoptim-1.4.1/jpegoptim-1.4.1/README",
-		"/C/Users/Augwich/Desktop/thank yous.txt",
-		"/C/Users/Augwich/Documents/Unity/Card Game - Sloan Tutorial/Assets/Scripts/Deck.cs",
-		"/C/Users/Augwich/Desktop/thank yous",
-		"/C/Users/Augwich/Documents/Unity/Card Game - Sloan Tutorial/Assets/Scripts/DeckModel.cs",
-		"/F/Website/projects/ad5-axis/context.php",
-		"/F/Website/projects/ad5-axis/main.php",
-		"/F/Website/projects/ad5-axis/program.php",
-		"/F/Website/projects/project.css",
-		"/F/Website/projects/ad5-axis/circulation.php",
-		"/F/Website/slideshow.php",
-		"/C/Users/Augwich/Documents/Unity/Card Game - Sloan Tutorial/Assets/Scripts/DebugChangeCard.cs",
-		"/C/Users/Augwich/Documents/Unity/Card Game - Sloan Tutorial/Assets/Scripts/CardFlipper.cs",
-		"/C/Users/Augwich/Documents/Unity/Card Game - Sloan Tutorial/Assets/Scripts/CardModel.cs",
-		"/F/Website/about.php",
-		"/F/Website/other_work.php",
-		"/C/Users/Augwich/Desktop/Notes/lemon jello.txt"
+		"/C/Users/Augwich/Downloads/jpegoptim-1.4.1.tar/jpegoptim-1.4.1/jpegoptim-1.4.1/README"
 	],
 	"find":
 	{
@@ -463,6 +481,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"4359",
 			"amtrak",
 			"avatar",
 			" labeled icon",
@@ -569,28 +588,84 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Website/humans.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 473,
+						"buffer_size": 3178,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								222,
-								222
+								3178,
+								3178
 							]
 						],
 						"settings":
 						{
+							"auto_name": "Dear Friends and Family,",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Lost Ruins of Arnak",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2870,
+								1776
+							]
+						],
+						"settings":
+						{
+							"auto_name": "The project for the proposed renovations to the Ro",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -601,82 +676,80 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Website/index.html",
+					"buffer": 3,
+					"file": "Data/Stations/Builds/Connections_SA_build 1.0.geojson",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20066,
+						"buffer_size": 3424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3361,
-								3361
+								65,
+								65
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1591.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Website/links.html",
+					"buffer": 4,
+					"file": "Data/Lines/Builds/Lines_SA_build 1.0.geojson",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 45532,
+						"buffer_size": 681711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33386,
-								33386
+								76666,
+								76666
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 823.0,
+						"translation.y": 12322.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
+					"file": "Data/Lines/Builds/Lines_MA_build 2.2.geojson",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3835,
+						"buffer_size": 785818,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								3835
+								59,
+								59
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Acoustics",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,

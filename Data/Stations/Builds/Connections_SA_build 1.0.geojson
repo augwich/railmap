@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "Connections_SA_build 1",
+"features": [
+{ "type": "Feature", "properties": { "fid": 87, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -77.007442, 38.89787 ], [ -77.005861, 38.898511 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 88, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -77.021931, 38.884856 ], [ -77.021239, 38.885551 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 89, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -77.029776, 38.99392 ], [ -77.030117, 38.992713 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 90, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -76.927471, 38.97825 ], [ -76.928538, 38.977828 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 91, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -76.872046, 38.949366 ], [ -76.871789, 38.948051 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 92, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -76.619719, 39.283737 ], [ -76.619327, 39.283155 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 93, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -84.446761, 33.640845 ], [ -84.446344, 33.640679 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 94, "Transfer Type": "Transfer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -82.533382, 27.980006 ], [ -82.534042, 27.980343 ], [ -82.535171, 27.980039 ], [ -82.535207, 27.97986 ], [ -82.534132, 27.979734 ], [ -82.533382, 27.980006 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 95, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.258326, 25.797111 ], [ -80.258672, 25.797822 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 96, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.259422, 25.84547 ], [ -80.259653, 25.846276 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 97, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.195556, 25.777938 ], [ -80.196104, 25.775988 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 98, "Transfer Type": "Transfer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -81.309587, 28.431159 ], [ -81.305998, 28.431222 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 99, "Transfer Type": "Transfer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.279675, 25.795006 ], [ -80.277036, 25.79508 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 100, "Transfer Type": "Transfer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.279675, 25.795006 ], [ -80.279839, 25.797144 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 101, "Transfer Type": "Transfer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.277036, 25.79508 ], [ -80.276581, 25.797279 ] ] ] } },
+{ "type": "Feature", "properties": { "fid": 102, "Transfer Type": "Connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -80.259149, 25.796738 ], [ -80.258672, 25.797822 ] ] ] } }
+]
+}
