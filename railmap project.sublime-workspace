@@ -220,15 +220,6 @@
 	"buffers":
 	[
 		{
-			"contents": "Dear Friends and Family,\nThe last year has without question been a difficult one. COVID-19 has upended our way of life and forced us to reinvent our routines, our livelihoods, and our connections with those we care about. Vivian and I hope that you all have managed to stay safe and healthy through this time, finding ways to maintain your relationships with others, and taking care of yourselves too. For those who may have experienced the effects of the coronavirus first-hand, we offer whatever love and care we can give for you and your loved ones.\nGiven all of this, Vivian and I feel that the most responsible course of action regarding our planned wedding celebration is to postpone once more. In recent months, we have begun to see positive change in light of the pandemic. Hospitalization rates are falling, and vaccination rates are going up. To quote the author John Green, \"the light-soaked days are coming.\" But it is a slow process, and based on current vaccination rates, Vivian and I do not feel it is wise to hold a wedding with all of you this coming May.\nDetails are still being finalized, however right now we are looking at postponing the wedding about a year, to May 14, 2022. I know this is a long way off, and disappointing. We had so hoped to see and celebrate with you all soon! But this celebration is just as much for all of you as it is for us, and the last thing we want is to create a situation where our guests do not feel comfortable attending. We will continue to send out additional information in the coming months as we finalize plans and re-sign contracts. \nVivian and I also wanted to share an update from the two of us. Given the length of the pandemic and the (now almost 2 year) postponements, there was concern amongst us and our parents that my father Alan would not be able to attend any future celebrations, due to his illness. He is doing as well as one can, but the future is unknown and hard to plan for. As such, we felt that we could not wait to hold some form of celebration for him, and for us. Vivian and I ended up getting officially married this past fall, on our original September date. Because of the pandemic we kept it small and simple, with only our parents and siblings in attendance. The small celebration was held at 375 West Mountain Road in Bernardston, with a family friend who lives next door conducting the ceremony. It was a lovely day to be sure, but it pained us that we could not celebrate with all of you. This is why we fully intend to host our original wedding with everyone as planned. Some elements may change (given the rings are on fingers), but it is important to us that we are able to join together with our friends and family, and we hope to host the celebration in a way that still honors that time.\nExpect to see additional emails or mailings from us as we finalize more information on this new date in the coming months. We will also update our website https://www.theknot.com/us/vivian-mok-and-august-rulewich-may-2021 with new information as we have it. Please also feel free to reach out to either of us if you have any questions or concerns.\nWishing you all the best,\n\nAugust and Vivian",
-			"settings":
-			{
-				"buffer_size": 3178,
-				"line_ending": "Windows",
-				"name": "Dear Friends and Family,"
-			}
-		},
-		{
 			"contents": "Lost Ruins of Arnak\nBeyond the Sun\nSeasons\nStone Age\nCity of the Big Shoulders\nSantorini\nThrough the Ages: A new Story of Civilization\nThe Voyages of Marco Polo\nWelcome To New Las Vegas\nLa Granja\n",
 			"settings":
 			{
@@ -238,39 +229,67 @@
 			}
 		},
 		{
-			"contents": "The project for the proposed renovations to the Robert Saltonstall Gymnasium (RSG) Renovation at Milton Academy includes scope for a minor renovation to the existing building, to provide new classroom space and upgraded office space on the lower level, and some accessibility upgrades on the main level. The scope for these renovations is shown on the attached floor plans, dated 2020-12-30, and detailed below:\n\n \n\n·        On the lower level, the existing south-east office block will be renovated into a new classroom L34. Both this and the existing classroom L32, as well as the accompanying corridor L31, will receive new mechanical systems and ceiling/finish upgrades. In addition, a new corridor L35 will be built through the existing locker room L39, allowing a third new classroom and two new offices to be constructed, as well as a new entry to the locker room. This includes a new MAAB / ADA-compliant ramp to navigate the existing floor change between corridor L31 and the north-eastern portion of the building. Finally, two new single-occupant toilet/shower rooms will be created in the western portion of the building, by converting two existing storage spaces. All new construction scope will be made accessible, to support any future renovations to the building.\n\n \n\n·        On the main (first) floor, the existing single-use toilet room will be reconfigured to support accessible use, and new drinking fountains will be provided (to replace the existing non-compliant fixtures). Any additional work on this floor will be to serve new mechanical equipment/ductwork being installed for the lower level only. This includes new ductwork and piping extending from a new DOAS unit on the roof of the existing smaller gym, for mechanical needs on the lower level.\n\nMilton Academy has requested improvements to the lower level of the existing RSG Building, to renovate some existing rooms into new classrooms and updated offices. The proposed renovation inclueds reconfiguring approximately 3,900 SF on the Lower Level of the building to create new classrooms and offices, a new entry into the existing locker room, and a new circulation corridor. In addition, two single-occupant toilet/shower rooms will be provided on the lower level, separate from the main scope of work. New mechanical systems, upgraded lighting, new plumbing, and new fire alarm systems will be provided within the scope of work boundary only. The project goal is to improve the use of the building in these areas while keeping accessibility in mind. To that end, the project includes a ramp and other accessible upgrades to the renovated area such that all new areas are accessible. On the main level, some accessibiliy upgrades will also be provided to an existing restroom, but this floor will otherwise remain untouched. No exterior work or sitework is included in the project scope.",
+			"file": "Website/index.html",
 			"settings":
 			{
-				"buffer_size": 2870,
+				"buffer_size": 20157,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Website/robots.txt",
+			"settings":
+			{
+				"buffer_size": 69,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Website/maps.html",
+			"settings":
+			{
+				"buffer_size": 1873,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Website/.htaccess",
+			"settings":
+			{
+				"buffer_size": 217,
+				"encoding": "UTF-8",
 				"line_ending": "Windows",
-				"name": "The project for the proposed renovations to the Ro"
+				"name": "#remove html file extension https://example.com/pa"
 			}
 		},
 		{
-			"file": "Data/Stations/Builds/Connections_SA_build 1.0.geojson",
+			"file": "Website/humans.txt",
 			"settings":
 			{
-				"buffer_size": 3424,
+				"buffer_size": 474,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Data/Lines/Builds/Lines_SA_build 1.0.geojson",
+			"file": "Website/links.html",
 			"settings":
 			{
-				"buffer_size": 681711,
+				"buffer_size": 45655,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Data/Lines/Builds/Lines_MA_build 2.2.geojson",
+			"file": "Website/faq.html",
 			"settings":
 			{
-				"buffer_size": 785818,
+				"buffer_size": 11228,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -336,6 +355,9 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_SA_build 1.0.geojson",
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 1.0.geojson",
+		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 2.2.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_SA_build 0.3.geojson",
 		"/C/Users/Augwich/Documents/My Games/stellarisdashboard-windows-latest/README.md",
 		"/C/Users/Augwich/Desktop/Habitat 67/text.txt",
@@ -460,14 +482,11 @@
 		"/C/Users/Augwich/Desktop/Games/Minecraft/Why Aren't We Bees/eula.txt",
 		"/C/Users/Augwich/Desktop/Board Games",
 		"/C/Users/Augwich/Desktop/Rail Map/Station Data Field_Value List",
-		"/F/Website/projects.php",
-		"/F/Website/header.php",
-		"/C/Users/Augwich/Dropbox/Firms.txt",
-		"/C/Users/Augwich/Downloads/jpegoptim-1.4.1.tar/jpegoptim-1.4.1/jpegoptim-1.4.1/README"
+		"/F/Website/projects.php"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -481,6 +500,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"metro.nfta",
+			"railmap.xyz/railmap",
 			"4359",
 			"amtrak",
 			"avatar",
@@ -588,39 +609,11 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3178,
-								3178
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Dear Friends and Family,",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"semi_transient": false,
 					"settings":
 					{
@@ -644,57 +637,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
+					"file": "Website/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2870,
+						"buffer_size": 20157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2870,
-								1776
+								999,
+								999
 							]
 						],
 						"settings":
 						{
-							"auto_name": "The project for the proposed renovations to the Ro",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Data/Stations/Builds/Connections_SA_build 1.0.geojson",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3424,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -704,48 +670,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Data/Lines/Builds/Lines_SA_build 1.0.geojson",
+					"buffer": 2,
+					"file": "Website/robots.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 681711,
+						"buffer_size": 69,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76666,
-								76666
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 12322.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Data/Lines/Builds/Lines_MA_build 2.2.geojson",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 785818,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								59,
-								59
+								69,
+								69
 							]
 						],
 						"settings":
@@ -756,7 +694,151 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Website/maps.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1873,
+								1873
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Website/.htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#remove html file extension https://example.com/pa",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Website/humans.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Website/links.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3198,
+								3198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 16214.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Website/faq.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7703,
+								7703
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2592.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

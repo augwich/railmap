@@ -13,8 +13,8 @@ Name: name or url
 
 /* SITE */
 
-Last update: July 19, 2020
-Current map version: 0.2.2
+Last update: April 27, 2021
+Current map version: 0.3.0
 Language: English (US)
 Components: Semantic UI, jQuery, Matomo
 Software: Mapbox, QGIS, Google Sheets
