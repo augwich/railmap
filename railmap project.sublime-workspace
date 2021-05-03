@@ -238,58 +238,21 @@
 			}
 		},
 		{
-			"file": "Website/robots.txt",
-			"settings":
-			{
-				"buffer_size": 69,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/maps.html",
-			"settings":
-			{
-				"buffer_size": 1873,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Website/.htaccess",
-			"settings":
-			{
-				"buffer_size": 217,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "#remove html file extension https://example.com/pa"
-			}
-		},
-		{
-			"file": "Website/humans.txt",
-			"settings":
-			{
-				"buffer_size": 474,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Website/links.html",
 			"settings":
 			{
-				"buffer_size": 45655,
+				"buffer_size": 56385,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Website/faq.html",
+			"contents": "Hi All,\n\nThis is a project I've been working on and off for the past few years. I recently reached a minor milestone and completed all the Eastern Coastal states, so figured I'd share and get some feedback.\n\n**What is this?**\n\nSimply put, it's a (work in progress) project to map all the passenger rail systems in the United States. I'm no expert when it comes to rail transit, but have always been a fan. The project came out of my desire to travel on trains where possible, but found there was no cohesive system to plan/do so. Specifically, as a resident of the New England, I was looking for alternate ways to travel between Boston and NYC without having to pay for Amtrak's expensive and/or slow Northeast Regional service (unfortunately as I found, there aren't any rail alternatives for the entire route. At least, not yet). Google Maps allows you to plan routes, but it is tied to the time you travel and is optimized for the fastest route. There are a few projects out there that map either all commuter rail systems, or in some cases *all* rail systems, but I struggled to find a map that showed all passenger rail (Heavy Rail/Subways, Light Rail, Commuter Rail, Amtrak) in a single map. Since I couldn't find anything, I thought \"well, guess I'll just have to make it myself.\" And here we are.\n\nThis is still very much a work in progress. Right now I've covered all systems for all the Atlantic Coast states, and am now beginning to move West. Eventually, I'll cover the entire US (and maybe Canada/Mexico, if I ever get to that point), but that's realistically still a few years off (this is a hobby project after all). Part of the reason for the long process is the thoroughness I've chained myself to, which includes not only showing all train lines, but logging some basic data about those lines (like owner, electrification, rough frequency, heavy/light/commuter, etc.) *as well as* mapping all stations along these routes. You can see some of this data has been exposed in the web map by clicking on individual stations (if you're curious and want to see all the data for this, you can check out the [Google Sheets](https://trello.com/c/ku71y8LA/85-station-datasets-google-sheets) or my [GitHub repository](https://github.com/augwich/railmap)).\n\nIt would be cool to someday include route-planning / line schedule updating in here, but I am very much *not* a web developer or a programmer. I'm just a guy who likes trains, and maps. This was almost a static map originally, but that would have been an absolutely massive file and I figured I'd try and take advantage of at least some of the modern tech. Everything you see here I've had to (slowly) teach myself. \n\nAlso, since this is still a work in progress, let me know if you see any errors with what I've mapped or have any problems accessing the site, as well as any general feedback! I'd love to hear what you all think and work in refining things to be more interesting/useful as I move forward. There's a [Trello Board](https://trello.com/b/GinKUKvq/usa-rail-project) if you're curious about the project further.\n\nThanks for your time!",
 			"settings":
 			{
-				"buffer_size": 11228,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 3110,
+				"line_ending": "Windows",
+				"name": "Hi All,"
 			}
 		}
 	],
@@ -355,6 +318,11 @@
 	],
 	"file_history":
 	[
+		"/F/Projects/Rail Map/Website/faq.html",
+		"/F/Projects/Rail Map/Website/humans.txt",
+		"/F/Projects/Rail Map/Website/robots.txt",
+		"/F/Projects/Rail Map/Website/maps.html",
+		"/F/Projects/Rail Map/Website/.htaccess",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_SA_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 1.0.geojson",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_MA_build 2.2.geojson",
@@ -376,7 +344,6 @@
 		"/C/Users/Augwich/Desktop/fix.bat",
 		"/F/Projects/Rail Map/Website/links.html",
 		"/F/Projects/Rail Map/Website/index.html",
-		"/F/Projects/Rail Map/Website/humans.txt",
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_SA_build 0.4.geojson",
 		"/C/Users/Augwich/Downloads/owssvr.ics",
 		"/C/Users/Augwich/Desktop/locaitons",
@@ -405,7 +372,6 @@
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA07BA40/pullman_1900.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOCA076AA1/pullman_1850.mdl",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/mod.lua",
-		"/F/Projects/Rail Map/Website/faq.html",
 		"/C/Program Files (x86)/Steam/steamapps/workshop/content/1066780/2038192715/workshop_fileid.txt",
 		"/C/Steam/userdata/45109132/1066780/local/settings.lua",
 		"/C/Program Files (x86)/Steam/userdata/45109132/1066780/local/settings.lua",
@@ -430,7 +396,6 @@
 		"/F/Projects/Rail Map/.gitignore",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 0.6.geojson",
 		"/F/Projects/Rail Map/Data/Stations/Builds/Connections_MA_build 0.5.geojson",
-		"/F/Projects/Rail Map/Website/maps.html",
 		"/C/Program Files (x86)/Steam/steamapps/common/Transport Fever 2/res/models/models/model/vehicle/train/usa/new_haven.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOEB03.tmp/american_post_coach.mdl",
 		"/C/Users/Augwich/AppData/Local/Temp/7zOA955.tmp/american_post_coach.mdl",
@@ -449,7 +414,6 @@
 		"/F/Projects/Rail Map/Data/Lines/Builds/Lines_NE_build 1.1.geojson",
 		"/F/Videos/Tutorials/OSM in Rhino/Part 2 - Elk and Rhino.txt",
 		"/F/Videos/Tutorials/OSM in Rhino/Part 1 - JOSM.txt",
-		"/F/Projects/Rail Map/Website/robots.txt",
 		"/F/Videos/Movies/Star Wars/HARMY-DEED-IV-V2.7-MKV-MANUAL/Star Wars Despecialized 2.7 MKV/SW 2.7 Readme.txt",
 		"/C/Users/Augwich/Desktop/semantic-sandbox/index.html",
 		"/C/Users/Augwich/AppData/Local/Introversion/Prison Architect/mods/Materials+/data/language/base-language.txt",
@@ -481,12 +445,11 @@
 		"/C/Users/Augwich/Documents/Christmas List 2017",
 		"/C/Users/Augwich/Desktop/Games/Minecraft/Why Aren't We Bees/eula.txt",
 		"/C/Users/Augwich/Desktop/Board Games",
-		"/C/Users/Augwich/Desktop/Rail Map/Station Data Field_Value List",
-		"/F/Website/projects.php"
+		"/C/Users/Augwich/Desktop/Rail Map/Station Data Field_Value List"
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -609,7 +572,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -637,7 +600,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -653,8 +616,8 @@
 						"selection":
 						[
 							[
-								999,
-								999
+								3976,
+								3976
 							]
 						],
 						"settings":
@@ -663,7 +626,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1620.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -671,27 +634,28 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Website/robots.txt",
+					"file": "Website/links.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 69,
+						"buffer_size": 56385,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								44231,
+								44231
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 22174.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -699,146 +663,31 @@
 				},
 				{
 					"buffer": 3,
-					"file": "Website/maps.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1873,
+						"buffer_size": 3110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1873,
-								1873
+								0,
+								3110
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Website/.htaccess",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 217,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#remove html file extension https://example.com/pa",
+							"auto_name": "Hi All,",
+							"spell_check": true,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Website/humans.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								256,
-								256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Website/links.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 45655,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3198,
-								3198
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 16214.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Website/faq.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11228,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7703,
-								7703
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2592.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
